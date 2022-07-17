@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "NbQQ7M2quP58oC++e3KBIgBEF/vRnUZSU55jKadQOQ+2SWBm03O7Jnbdj2J5JEEwcAB1HQ7NNGj77mZgLDB/bQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Rudrex\\OneDrive\\Área de Trabalho\\mvc aspnet framework\\LancheMVC\\LancheMVC_Aplication\\LancheMVC_Aplication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rudrex\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Rudrex\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
