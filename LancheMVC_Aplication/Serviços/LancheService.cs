@@ -22,6 +22,7 @@ namespace LancheMVC_Aplication.Serviços
             var LancheID = await _lanche.PegaLanchePorId(id);
             return _mapper.Map<LancheDTO>(LancheID);
             
+            
 
         }
 
