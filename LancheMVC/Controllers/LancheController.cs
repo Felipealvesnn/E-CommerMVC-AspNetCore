@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 using static LancheMVC_Aplication.DTOs.AllDTo;
+using static LancheMVC_Aplication.DTOs.LancheListViewModel;
 
 namespace LancheMVC.Controllers
 {
@@ -19,19 +20,19 @@ namespace LancheMVC.Controllers
 
         public async Task<IActionResult> List()
         {
-            AllDTo geraldto = new AllDTo();
-            geraldto.LancheDTO = new LancheDTO();
-            geraldto.resultLanche = new ResultLanche();
-            //geraldto.categoriadto = new CategoriaDTo();
+            LancheListViewModel geraldto = new LancheListViewModel();
 
-            var todos = await _lanches.RetornaTodos();
-            geraldto.resultLanche.lLanches = todos.ToList();
+
+
+            geraldto.lanches = await _lanches.RetornaTodos();
+            geraldto.CategoriaAtual = "categoria atual";
+            
 
             ViewData["data"] = DateTime.Now;
-            var totalLanches = todos.Count();
+            var totalLanches = geraldto.lanches.Count();
             ViewBag.totalLanches = totalLanches;
 
-            return View(todos);
+            return View(geraldto);
         }
     }
 }

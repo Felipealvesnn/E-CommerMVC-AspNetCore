@@ -1,4 +1,5 @@
-﻿@model IEnumerable<LancheMVC_Aplication.DTOs.LancheDTO>
+﻿@*@model IEnumerable<LancheMVC_Aplication.DTOs.LancheDTO>*@
+@model LancheListViewModel
 @*@model LancheMVC_Aplication.DTOs.AllDTo*@
 
 <div>
@@ -9,11 +10,22 @@
  <h1>NUmeto total de lanches é @ViewBag.totalLanches</h1>
 <hr />
 
-@foreach(var lanche in Model)
+
+<div class="container">
+
+    <div class="row">
+@foreach(var lanche in Model.lanches)
 {
-    <div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <p><img src="@lanche.ImagemUrl" class="img-fluid"></p>
+         <h3>Preço : @lanche.Preco.ToString("c")</h3>
         <h4>@lanche.Nome</h4>
-        <p><img src="@lanche.ImagemUrl"></p>
-        <h3>Preço : @lanche.Preco.ToString("c")</h3>
+        <p>@lanche.DescricaoCurta</p>
+        
+       
     </div>
 }
+
+</div>
+
+</div>
