@@ -23,6 +23,11 @@ public class Startup
         services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("coneccaoDB"), 
             b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
         services.AddControllersWithViews();
+        services.AddMemoryCache();
+        services.AddSession();
+
+
+        services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         services.AddTransient<ILanches, RepositoryLanche>();
         services.AddTransient<ILancheServices, LancheService>();
         services.AddTransient<ICategoria, RepositoryCategoria>();
@@ -46,6 +51,8 @@ public class Startup
         app.UseStaticFiles();
 
         app.UseRouting();
+
+        app.UseSession();
 
         app.UseAuthorization();
 
