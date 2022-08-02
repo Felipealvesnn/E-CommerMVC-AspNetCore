@@ -28,3 +28,7 @@ C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\De
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\refint\LancheMVC_Aplication.dll
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\LancheMVC_Aplication.pdb
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\ref\LancheMVC_Aplication.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Aplication.runtimeconfig.json
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Data.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Data.pdb
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\LancheMVC_Aplication.genruntimeconfig.cache

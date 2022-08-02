@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LancheMVC_Data\LancheMVC_Data.csproj" />
     <ProjectReference Include="..\LancheMVC_Domain\LancheMVC_Domain.csproj" />
   </ItemGroup>
 

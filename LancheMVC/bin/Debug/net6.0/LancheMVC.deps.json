@@ -2278,6 +2278,7 @@
       "LancheMVC_Aplication/1.0.0": {
         "dependencies": {
           "AutoMapper": "11.0.1",
+          "LancheMVC_Data": "1.0.0",
           "LancheMVC_Domain": "1.0.0"
         },
         "runtime": {
