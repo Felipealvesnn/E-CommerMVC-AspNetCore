@@ -52,7 +52,7 @@ public class Startup
 
         app.UseRouting();
 
-        app.UseSession();
+        app.UseSession();//sessão inicializada
 
         app.UseAuthorization();
 
