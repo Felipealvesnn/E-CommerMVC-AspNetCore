@@ -41,19 +41,19 @@ namespace LancheMVC_Domain
 
         public void AdicionarAoCarrinho(Lanche lanche)
         {
-            var carrinhoCompraItem = _Context.CarrinhoCompraItens.SingleOrDefault(
-                     s => s.Lanche.LancheId == lanche.LancheId &&
-                     s.CarrinhoCompraId == CarrinhoCompraId);
+            var carrinhoCompraItem = _Context.CarrinhoCompraItem.SingleOrDefault(
+                     s => s.Lanche.Id == lanche.Id &&
+                     s.CarrinhoCompraId == CarrinhocompraID);
 
             if (carrinhoCompraItem == null)
             {
                 carrinhoCompraItem = new CarrinhoCompraItem
                 {
-                    CarrinhoCompraId = CarrinhoCompraId,
+                    CarrinhoCompraId = CarrinhocompraID,
                     Lanche = lanche,
                     Quantidade = 1
                 };
-                _Context.CarrinhoCompraItens.Add(carrinhoCompraItem);
+                _Context.CarrinhoCompraItem.Add(carrinhoCompraItem);
             }
             else
             {
