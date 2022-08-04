@@ -5,7 +5,7 @@ using LancheMVC_Aplication.DTOs;
 namespace LancheMVC_Aplication.DTOs
 {
     [Table("CarrinhoCompraItens")]
-    public class CarrinhoCompraItem
+    public class CarrinhoCompraItemVM
     {
         public int CarrinhoCompraItemId { get; set; }
         public LancheDTO Lanche { get; set; }
