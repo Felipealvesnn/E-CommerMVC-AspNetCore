@@ -31,6 +31,7 @@ public class Startup
         services.AddTransient<ILanches, RepositoryLanche>();
         services.AddTransient<ILancheServices, LancheService>();
         services.AddTransient<ICategoria, RepositoryCategoria>();
+        services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));// carrinho instaciado e iniciado na sessao
         services.AddAutoMapper(typeof(DomainTOMappingProfile));
     }
 

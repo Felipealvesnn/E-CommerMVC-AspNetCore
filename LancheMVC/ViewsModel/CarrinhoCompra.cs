@@ -1,17 +1,26 @@
-﻿using LancheMVC_Data.Contexto;
-using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using LancheMVC_Aplication.DTOs;
+using LancheMVC_Data.Contexto;
+using LancheMVC_Domain;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
-namespace LancheMVC_Domain
+namespace LancheMVC
 {
     public class CarrinhoCompra
     {
         private readonly AppDbContext _Context;
+        private readonly IMapper _mapper;
+        private AppDbContext context;
+
+        public CarrinhoCompra(AppDbContext context, IMapper mapper)
+        {
+            _Context = context;
+            _mapper = mapper;
+        }
 
         public CarrinhoCompra(AppDbContext context)
         {
-            _Context = context;
+            this.context = context;
         }
 
         public string CarrinhocompraID { get; set; }
@@ -39,8 +48,10 @@ namespace LancheMVC_Domain
 
         }
 
-        public void AdicionarAoCarrinho(Lanche lanche)
+        public void AdicionarAoCarrinho(Task<LancheDTO> lanches)
         {
+
+              var lanche = _mapper.Map<Lanche>(lanches);
             var carrinhoCompraItem = _Context.CarrinhoCompraItem.SingleOrDefault(
                      s => s.Lanche.Id == lanche.Id &&
                      s.CarrinhoCompraId == CarrinhocompraID);
@@ -62,8 +73,9 @@ namespace LancheMVC_Domain
             _Context.SaveChanges();
         }
 
-        public int RemoverDoCarrinho(Lanche lanche)
+        public int RemoverDoCarrinho(Task<LancheDTO> lanches)
         {
+            var lanche = _mapper.Map<Lanche>(lanches);
             var carrinhoCompraItem = _Context.CarrinhoCompraItem.SingleOrDefault(
                    s => s.Lanche.Id == lanche.Id &&
                    s.CarrinhoCompraId == CarrinhocompraID);

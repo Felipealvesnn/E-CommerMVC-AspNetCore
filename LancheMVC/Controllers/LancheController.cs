@@ -2,10 +2,7 @@
 using LancheMVC_Aplication.DTOs;
 using LancheMVC_Aplication.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Threading.Tasks;
-using static LancheMVC_Aplication.DTOs.AllDTo;
-using static LancheMVC_Aplication.DTOs.LancheListViewModel;
+
 
 namespace LancheMVC.Controllers
 {

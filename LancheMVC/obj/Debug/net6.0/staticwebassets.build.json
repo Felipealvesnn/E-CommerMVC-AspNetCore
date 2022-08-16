@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Zw1ptY/GG5nNGR7+v/sAQ476s31WiXN8CydQ9Odt0yw=",
+  "Hash": "CRD4n4/eA4OqIinOo6ovfu1+w2J2fMmUSXCi+m8u9l0=",
   "Source": "LancheMVC",
   "BasePath": "_content/LancheMVC",
   "Mode": "Default",
@@ -134,6 +134,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\carousel13.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC\\wwwroot\\images\\Full-Cart-icon.png",
+      "SourceId": "LancheMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC\\wwwroot\\",
+      "BasePath": "_content/LancheMVC",
+      "RelativePath": "images/Full-Cart-icon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Full-Cart-icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC\\wwwroot\\images\\remove.ico",
+      "SourceId": "LancheMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC\\wwwroot\\",
+      "BasePath": "_content/LancheMVC",
+      "RelativePath": "images/remove.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\remove.ico"
     },
     {
       "Identity": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC\\wwwroot\\js\\site.js",
