@@ -1,6 +1,5 @@
 ﻿using LancheMVC_Aplication.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-
 namespace LancheMVC.Controllers
 {
     public class CarrinhoCompraController : Controller
@@ -19,20 +18,23 @@ namespace LancheMVC.Controllers
             var itens = _carrrinhoCompra.GetCarrinhoCompraItens();
             _carrrinhoCompra.CarrinhoCompraItems = itens;
 
-            var carrinhoCompraVM = new CarinhoCompraVM {
+            var carrinhoCompraVM = new CarinhoCompraVM
+            {
                 CarrinhoCompra = _carrrinhoCompra,
-                CarrinhoCompraTotal= _carrrinhoCompra.GetCarrinhoCompraTotal(),
+                CarrinhoCompraTotal = _carrrinhoCompra.GetCarrinhoCompraTotal(),
 
             };
 
             return View(carrinhoCompraVM);
         }
-        public RedirectToActionResult AdicionarItemNoCarrinho(int lancheId) { 
-        
-        var LancheSelecionado= _lanches.PegarPorId(lancheId);
-            if (LancheSelecionado != null) {
+        public RedirectToActionResult AdicionarItemNoCarrinho(int lancheId)
+        {
+
+            var LancheSelecionado = _lanches.PegarPorId(lancheId);
+            if (LancheSelecionado != null)
+            {
                 _carrrinhoCompra.AdicionarAoCarrinho(LancheSelecionado);
-            
+
             }
             return RedirectToAction("Index");
 
@@ -54,3 +56,4 @@ namespace LancheMVC.Controllers
 
     }
 }
+
