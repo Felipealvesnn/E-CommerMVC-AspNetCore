@@ -13,5 +13,6 @@ namespace LancheMVC_Aplication.Interfaces
         Task<IEnumerable<LancheDTO>> RetornaTodos();
         Task<LancheDTO> PegarPorId(int? id);
         IEnumerable<LancheDTO> RetornaLanchePreferido();
+        Task<IEnumerable<LancheDTO>> RetornaTodosLanchesComCategoria();
     }
 }

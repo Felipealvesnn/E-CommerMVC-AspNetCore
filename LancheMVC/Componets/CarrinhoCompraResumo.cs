@@ -14,13 +14,14 @@ namespace LancheMVC.Componets
 
         public IViewComponentResult Invoke() {
 
-            // var itens = _carrrinhoCompra.GetCarrinhoCompraItens();
+             var itens = _carrrinhoCompra.GetCarrinhoCompraItens();
 
-            var itens = new List<CarrinhoCompraItem>() {
-            new CarrinhoCompraItem(),
-            new CarrinhoCompraItem()
+            //var itens = new List<CarrinhoCompraItem>() {
+            //new CarrinhoCompraItem(),
+            //new CarrinhoCompraItem()
 
-            };
+            //};
+
             _carrrinhoCompra.CarrinhoCompraItems = itens;
 
             var carrinhoCompraVM = new CarinhoCompraVM

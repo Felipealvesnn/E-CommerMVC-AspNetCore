@@ -13,9 +13,9 @@ namespace LancheMVC
         private readonly IMapper _mapper;
      
 
-        public CarrinhoCompra(AppDbContext context, IMapper mapper)
+        public CarrinhoCompra(IMapper mapper)
         {
-            Context = context; 
+            
             _mapper = mapper;
            
         }
@@ -27,7 +27,7 @@ namespace LancheMVC
 
         public string CarrinhoCompraId { get; set; }
         public List<CarrinhoCompraItem> CarrinhoCompraItems { get; set; }
-        public AppDbContext Context { get; }
+       
 
         public static CarrinhoCompra GetCarrinho(IServiceProvider services)
         {

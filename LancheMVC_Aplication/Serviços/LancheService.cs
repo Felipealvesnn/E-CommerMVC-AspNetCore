@@ -35,6 +35,11 @@ namespace LancheMVC_Aplication.Serviços
         public async Task<IEnumerable<LancheDTO>> RetornaTodos()
         {
             var categoriesEntity = await _lanche.ReTornaTodos();
+            return  _mapper.Map<IEnumerable<LancheDTO>>(categoriesEntity);
+        }
+        public async Task<IEnumerable<LancheDTO>> RetornaTodosLanchesComCategoria()
+        {
+            var categoriesEntity = await _lanche.RetornaLancheComCategoria();
             return _mapper.Map<IEnumerable<LancheDTO>>(categoriesEntity);
         }
     }

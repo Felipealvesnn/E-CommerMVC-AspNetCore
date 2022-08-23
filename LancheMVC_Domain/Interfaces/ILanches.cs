@@ -10,5 +10,7 @@ namespace LancheMVC_Domain.Interfaces
     {
         IEnumerable<Lanche> RetornaLanchePreferido ();
         Task<Lanche> PegaLanchePorId(int? id);
+        Task< IEnumerable<Lanche>> RetornaLancheComCategoria();
+
     }
 }

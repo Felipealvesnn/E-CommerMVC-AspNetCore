@@ -11,6 +11,7 @@ namespace LancheMVC_Data.Repository
         {
 
         }
+       
 
         public async Task<Lanche> PegaLanchePorId(int? id)
         {
@@ -22,8 +23,9 @@ namespace LancheMVC_Data.Repository
             return  _Ctx.Lanches.Where(l => l.IsLanchePreferido).Include(l => l.Categoria);
         }
 
-        
-
-
+        public async Task<IEnumerable<Lanche>> RetornaLancheComCategoria()
+        {
+            return await _Ctx.Lanches.Include(l => l.Categoria).ToListAsync();
+        }
     }
 }
