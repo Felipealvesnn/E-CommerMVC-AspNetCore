@@ -33,21 +33,13 @@ namespace LancheMVC.Controllers
             }
             else
             {
-                if (string.Equals("Normal", Category, StringComparison.OrdinalIgnoreCase))
-                {
+                
                     lanches = await _lanches.RetornaTodosLanchesComCategoria();
-                    LancheOrdenado = lanches.Where(l => l.Categoria.CategoryName.Equals("Normal"));
+                    LancheOrdenado = lanches.Where(l => l.Categoria.CategoryName.Equals(Category));
                    
 
 
-                }
-                else
-                {
-                    lanches = await _lanches.RetornaTodosLanchesComCategoria();
-                   LancheOrdenado = lanches.Where(l => l.Categoria.CategoryName.Equals("Natural"))
-                       .OrderBy(l => l.Nome);
-                  
-                }
+             
                 categoriaAtual = Category;
                 LanchesVM = new LancheListViewModel { lanches = LancheOrdenado, CategoriaAtual = categoriaAtual };
 
