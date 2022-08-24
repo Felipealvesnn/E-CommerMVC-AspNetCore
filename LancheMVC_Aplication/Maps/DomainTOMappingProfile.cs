@@ -9,7 +9,7 @@ namespace LancheMVC_Aplication.Maps
         public DomainTOMappingProfile()
         {
             CreateMap<Lanche, LancheDTO>().ReverseMap();
-            CreateMap<Categoria, CategoriaDTo>().ReverseMap();
+            CreateMap<Categoria, CategoriaDTO>().ReverseMap();
 
         }
     }

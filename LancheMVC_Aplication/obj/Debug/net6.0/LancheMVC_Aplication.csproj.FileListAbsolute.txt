@@ -14,9 +14,12 @@ C:\Users\Rudrex\OneDrive\Área de Trabalho\mvc aspnet framework\LancheMVC\Lanche
 C:\Users\Rudrex\OneDrive\Área de Trabalho\mvc aspnet framework\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\LancheMVC_Aplication.pdb
 C:\Users\Rudrex\OneDrive\Área de Trabalho\mvc aspnet framework\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\ref\LancheMVC_Aplication.dll
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Aplication.deps.json
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Aplication.runtimeconfig.json
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Aplication.dll
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Aplication.pdb
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Data.dll
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Domain.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Data.pdb
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Domain.pdb
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\LancheMVC_Aplication.csproj.AssemblyReference.cache
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\LancheMVC_Aplication.GeneratedMSBuildEditorConfig.editorconfig
@@ -27,8 +30,5 @@ C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\De
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\LancheMVC_Aplication.dll
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\refint\LancheMVC_Aplication.dll
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\LancheMVC_Aplication.pdb
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\ref\LancheMVC_Aplication.dll
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Aplication.runtimeconfig.json
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Data.dll
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\bin\Debug\net6.0\LancheMVC_Data.pdb
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\LancheMVC_Aplication.genruntimeconfig.cache
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Aplication\obj\Debug\net6.0\ref\LancheMVC_Aplication.dll

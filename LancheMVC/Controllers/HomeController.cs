@@ -21,8 +21,9 @@ namespace LancheMVC.Controllers
         public IActionResult Index()
         {
            var homeVm = new HomeVM { lanchePreferido = _lanches.RetornaLanchePreferido() };
-         
+
             return View(homeVm);
+           
         }
 
         public IActionResult Privacy()

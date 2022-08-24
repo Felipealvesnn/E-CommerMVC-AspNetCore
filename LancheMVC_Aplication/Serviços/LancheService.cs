@@ -32,9 +32,9 @@ namespace LancheMVC_Aplication.Serviços
             return _mapper.Map<IEnumerable<LancheDTO>>(lanchepreferido);
         }
 
-        public async Task<IEnumerable<LancheDTO>> RetornaTodos()
+        public IEnumerable<LancheDTO> RetornaTodos()
         {
-            var categoriesEntity = await _lanche.ReTornaTodos();
+            var categoriesEntity =  _lanche.ReTornaTodos();
             return  _mapper.Map<IEnumerable<LancheDTO>>(categoriesEntity);
         }
         public async Task<IEnumerable<LancheDTO>> RetornaTodosLanchesComCategoria()

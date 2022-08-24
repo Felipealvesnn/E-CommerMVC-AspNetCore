@@ -8,7 +8,7 @@ namespace LancheMVC_Domain.Interfaces
 {
     public interface IRepository<t> where t : Entity
     {
-        Task< IEnumerable<t>> ReTornaTodos();
+         IEnumerable<t> ReTornaTodos();
         Task<t> PegaPorId(int? id);
 
        

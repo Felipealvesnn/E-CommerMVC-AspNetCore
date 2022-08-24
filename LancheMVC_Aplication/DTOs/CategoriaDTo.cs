@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LancheMVC_Aplication.DTOs
 {
-    public class CategoriaDTo
+    public class CategoriaDTO
     {
         [Key]
         public int Id { get; set; }
@@ -12,7 +12,7 @@ namespace LancheMVC_Aplication.DTOs
         [StringLength(100, ErrorMessage = "O tamanho máximo é 100 caracteres")]
         [Required(ErrorMessage = "Informe o nome da categoria")]
         [Display(Name = "Nome")]
-        public string CategoriaNome { get; set; }
+        public string CategoryName { get; set; }
 
         [StringLength(200, ErrorMessage = "O tamanho máximo é 200 caracteres")]
         [Required(ErrorMessage = "Informe a descrição da categoria")]

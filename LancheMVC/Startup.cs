@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace LancheMVC;
 public class Startup
 {
-    public Startup(IConfiguration configuration )
+    public Startup(IConfiguration configuration)
     {
         Configuration = configuration;
     }
@@ -18,9 +18,9 @@ public class Startup
     public IConfiguration Configuration { get; }
 
     // This method gets called by the runtime. Use this method to add services to the container.
-    public void ConfigureServices(IServiceCollection services )
+    public void ConfigureServices(IServiceCollection services)
     {
-        services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("coneccaoDB"), 
+        services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("coneccaoDB"),
             b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
         services.AddControllersWithViews();
         services.AddMemoryCache();
@@ -31,6 +31,8 @@ public class Startup
         services.AddTransient<ILanches, RepositoryLanche>();
         services.AddTransient<ILancheServices, LancheService>();
         services.AddTransient<ICategoria, RepositoryCategoria>();
+        services.AddTransient<ICategoryServices, CategoryService>();
+
         services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));// carrinho instaciado e iniciado na sessao
         services.AddAutoMapper(typeof(DomainTOMappingProfile));
     }
@@ -59,9 +61,21 @@ public class Startup
 
         app.UseEndpoints(endpoints =>
         {
+           
+
+
             endpoints.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+            name: "CategoriaFiltro",
+            pattern: "Lanche/{action}/{Categoria?}",
+            defaults: new { controller = "Lanche", Action="List" }
+            );
+
+            endpoints.MapControllerRoute(
+               name: "default",
+               pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+
         });
     }
 }

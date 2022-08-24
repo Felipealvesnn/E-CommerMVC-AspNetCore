@@ -13,9 +13,9 @@ namespace LancheMVC_Data.Repository
         {
             _Ctx = ctx;
         }
-        public async Task< IEnumerable<t>> ReTornaTodos()
+        public  IEnumerable<t> ReTornaTodos()
         {
-            return await  _Ctx.Set<t>().ToListAsync();
+            return   _Ctx.Set<t>().ToList();
         }
         public async Task<t> PegaPorId(int? id)
         {

@@ -10,7 +10,7 @@ namespace LancheMVC_Aplication.Interfaces
 {
     public interface ILancheServices
     {
-        Task<IEnumerable<LancheDTO>> RetornaTodos();
+        IEnumerable<LancheDTO> RetornaTodos();
         Task<LancheDTO> PegarPorId(int? id);
         IEnumerable<LancheDTO> RetornaLanchePreferido();
         Task<IEnumerable<LancheDTO>> RetornaTodosLanchesComCategoria();

@@ -8,7 +8,7 @@ namespace LancheMVC_Aplication.DTOs
 {
     public class AllDTo
     {
-        public CategoriaDTo categoriadto { get; set; }
+        public CategoriaDTO categoriadto { get; set; }
         public LancheDTO   LancheDTO { get; set; }
 
         public ResultCategoria resultCategoria { get; set; }
@@ -16,7 +16,7 @@ namespace LancheMVC_Aplication.DTOs
 
         public class ResultCategoria
         {
-            public List<CategoriaDTo> lCategorias { get; set; }
+            public List<CategoriaDTO> lCategorias { get; set; }
         }
 
         public class ResultLanche
