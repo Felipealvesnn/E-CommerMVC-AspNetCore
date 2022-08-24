@@ -37,9 +37,9 @@ namespace LancheMVC.Controllers
                     lanches = await _lanches.RetornaTodosLanchesComCategoria();
                     LancheOrdenado = lanches.Where(l => l.Categoria.CategoryName.Equals(Category));
                    
+               var tr= 50.0.porcentagemArrombada(23);
 
 
-             
                 categoriaAtual = Category;
                 LanchesVM = new LancheListViewModel { lanches = LancheOrdenado, CategoriaAtual = categoriaAtual };
 
