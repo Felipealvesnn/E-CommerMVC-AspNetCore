@@ -1,11 +1,18 @@
 ﻿using LancheMVC_Aplication.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using LancheMVC.Helps;
+using Microsoft.EntityFrameworkCore;
+using LancheMVC_Data.Repository;
+
 namespace LancheMVC.Controllers
 {
     public class CarrinhoCompraController : Controller
     {
         private readonly ILancheServices _lanches;
         private readonly CarrinhoCompra _carrrinhoCompra;
+      
+        
+
 
         public CarrinhoCompraController(ILancheServices lanches, CarrinhoCompra carrrinhoCompra)
         {
@@ -29,8 +36,8 @@ namespace LancheMVC.Controllers
         }
         public RedirectToActionResult AdicionarItemNoCarrinho(int lancheId)
         {
-
-            var LancheSelecionado = _lanches.PegarPorId(lancheId);
+            
+            var LancheSelecionado = _lanches.PegarPorId(lancheId).TOLanche();
             if (LancheSelecionado != null)
             {
                 _carrrinhoCompra.AdicionarAoCarrinho(LancheSelecionado);
@@ -43,7 +50,7 @@ namespace LancheMVC.Controllers
         public RedirectToActionResult RemoverItemNoCarrinho(int lancheId)
         {
 
-            var LancheSelecionado = _lanches.PegarPorId(lancheId);
+            var LancheSelecionado = _lanches.PegarPorId(lancheId).TOLanche();
             if (LancheSelecionado != null)
             {
                 _carrrinhoCompra.RemoverDoCarrinho(LancheSelecionado);

@@ -7,7 +7,7 @@ namespace LancheMVC_Data.Repository
 {
     public class Repository<t> : IRepository<t> where t : Entity
     {
-        protected readonly AppDbContext _Ctx;
+        public readonly AppDbContext _Ctx;
 
         public Repository(AppDbContext ctx)
         {

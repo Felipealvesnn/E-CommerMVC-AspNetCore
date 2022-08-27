@@ -7,7 +7,7 @@ namespace LancheMVC_Data.Contexto
     {
         public AppDbContext(DbContextOptions<AppDbContext> options): base(options)
         {
-
+            
         }
 
         public DbSet<Categoria> Categorias { get;  set; }
@@ -18,6 +18,7 @@ namespace LancheMVC_Data.Contexto
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+         
         }
 
         

@@ -9,8 +9,8 @@ namespace LancheMVC_Domain.Interfaces
     public interface ILanches: IRepository<Lanche>
     {
         IEnumerable<Lanche> RetornaLanchePreferido ();
-        Task<Lanche> PegaLanchePorId(int? id);
-        Task< IEnumerable<Lanche>> RetornaLancheComCategoria();
+        Lanche PegaLanchePorId(int? id);
+        IEnumerable<Lanche> RetornaLancheComCategoria();
 
     }
 }

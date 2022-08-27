@@ -13,19 +13,21 @@ namespace LancheMVC_Data.Repository
         }
        
 
-        public async Task<Lanche> PegaLanchePorId(int? id)
+        public Lanche PegaLanchePorId(int? id)
         {
-            return await _Ctx.Lanches.Include(c => c.Categoria).SingleOrDefaultAsync(p => p.Id == id);
+              return _Ctx.Lanches.AsNoTracking().Include(c => c.Categoria).SingleOrDefault(p => p.Id == id);
+            // return _Ctx.Lanches.Find(id);
+
         }
 
         public IEnumerable<Lanche> RetornaLanchePreferido()
         {
-            return  _Ctx.Lanches.Where(l => l.IsLanchePreferido).Include(l => l.Categoria);
+            return  _Ctx.Lanches.AsNoTracking().Where(l => l.IsLanchePreferido).Include(l => l.Categoria);
         }
 
-        public async Task<IEnumerable<Lanche>> RetornaLancheComCategoria()
+        public  IEnumerable<Lanche> RetornaLancheComCategoria()
         {
-            return await _Ctx.Lanches.Include(l => l.Categoria).ToListAsync();
+            return  _Ctx.Lanches.AsNoTracking().Include(l => l.Categoria).ToList();
         }
     }
 }

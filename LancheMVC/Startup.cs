@@ -20,8 +20,21 @@ public class Startup
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("coneccaoDB"),
-            b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
+        //services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("coneccaoDB"),
+        //    b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName))
+        
+        //);
+
+        services.AddDbContext<AppDbContext>(options =>
+        {
+        options.UseSqlServer(Configuration.GetConnectionString("coneccaoDB"),
+            b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName));
+        options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+       
+        });
+
+
+
         services.AddControllersWithViews();
         services.AddMemoryCache();
         services.AddSession();

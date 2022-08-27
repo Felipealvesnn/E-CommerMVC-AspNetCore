@@ -15,36 +15,36 @@ namespace LancheMVC.Controllers
             _lanches = lanches;
         }
 
-        public async Task<IActionResult> List(string Category)
+        public IActionResult List(string Category)
         {
-            
+
             IEnumerable<LancheDTO> lanches;
             IEnumerable<LancheDTO> LancheOrdenado;
             string categoriaAtual = string.Empty;
-            LancheListViewModel LanchesVM ;
+            LancheListViewModel LanchesVM;
 
 
             if (string.IsNullOrEmpty(Category))
             {
-                lanches = await _lanches.RetornaTodosLanchesComCategoria();
+                lanches = _lanches.RetornaTodosLanchesComCategoria();
 
                 categoriaAtual = "Todos os lanches";
                 LanchesVM = new LancheListViewModel { lanches = lanches, CategoriaAtual = categoriaAtual };
             }
             else
             {
-                
-                    lanches = await _lanches.RetornaTodosLanchesComCategoria();
-                    LancheOrdenado = lanches.Where(l => l.Categoria.CategoryName.Equals(Category));
-                   
-               var tr= 50.0.porcentagemArrombada(23);
+
+                lanches = _lanches.RetornaTodosLanchesComCategoria();
+                LancheOrdenado = lanches.Where(l => l.Categoria.CategoryName.Equals(Category));
+
+                var tr = 50.0.porcentagemArrombada(23);
 
 
                 categoriaAtual = Category;
                 LanchesVM = new LancheListViewModel { lanches = LancheOrdenado, CategoriaAtual = categoriaAtual };
 
             }
-             
+
 
 
             //ViewData["data"] = DateTime.Now;
@@ -53,5 +53,11 @@ namespace LancheMVC.Controllers
 
             return View(LanchesVM);
         }
+        public IActionResult Details(int Id)
+        {
+            var lanche = _lanches.PegarPorId(Id) ;
+            return View(lanche);
+        }
+
     }
 }

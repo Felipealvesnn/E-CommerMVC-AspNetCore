@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using LancheMVC.Helps;
 using LancheMVC_Aplication.DTOs;
 using LancheMVC_Data.Contexto;
 using LancheMVC_Domain;
@@ -10,16 +11,10 @@ namespace LancheMVC
     public class CarrinhoCompra
     {
         private readonly AppDbContext _context;
-        private readonly IMapper _mapper;
+       
      
 
-        public CarrinhoCompra(IMapper mapper)
-        {
-            
-            _mapper = mapper;
-           
-        }
-
+       
         public CarrinhoCompra(AppDbContext context)
         {
             _context = context;
@@ -51,22 +46,24 @@ namespace LancheMVC
             };
         }
 
-        public void AdicionarAoCarrinho(Task<LancheDTO> lanches)
+        public void AdicionarAoCarrinho(Lanche lanche)
         {
-            var lanche = _mapper.Map<Lanche>(lanches);
-            var carrinhoCompraItem = _context.CarrinhoCompraItem .SingleOrDefault(
-                     s => s.Lanche.Id == lanche.Id &&
-                     s.CarrinhoCompraId == CarrinhoCompraId);
-
+            CarrinhoCompraItem carrinhoCompraItem = null;
+            //var carrinhoCompraItem = _context.CarrinhoCompraItem.AsNoTracking().SingleOrDefault(
+            //         s => s.Lanche.Id == lanche.Id &&
+            //         s.CarrinhoCompraId == CarrinhoCompraId);
+            lanche.Id++;
             if (carrinhoCompraItem == null)
             {
-                carrinhoCompraItem = new CarrinhoCompraItem
+                 carrinhoCompraItem = new CarrinhoCompraItem
                 {
                     CarrinhoCompraId = CarrinhoCompraId,
                     Lanche = lanche,
                     Quantidade = 1
                 };
+                _context.SaveChanges();
                 _context.CarrinhoCompraItem.Add(carrinhoCompraItem);
+                _context.SaveChanges();
             }
             else
             {
@@ -75,9 +72,9 @@ namespace LancheMVC
             _context.SaveChanges();
         }
 
-        public int RemoverDoCarrinho(Task<LancheDTO> lanches)
+        public int RemoverDoCarrinho(Lanche lanche)
         {
-            var lanche = _mapper.Map<Lanche>(lanches);
+           
             var carrinhoCompraItem = _context.CarrinhoCompraItem.SingleOrDefault(
                    s => s.Lanche.Id == lanche.Id &&
                    s.CarrinhoCompraId == CarrinhoCompraId);
@@ -113,7 +110,7 @@ namespace LancheMVC
         {
             var carrinhoItens = _context.CarrinhoCompraItem
                                  .Where(carrinho => carrinho.CarrinhoCompraId == CarrinhoCompraId);
-
+           
             _context.CarrinhoCompraItem.RemoveRange(carrinhoItens);
             _context.SaveChanges();
         }
