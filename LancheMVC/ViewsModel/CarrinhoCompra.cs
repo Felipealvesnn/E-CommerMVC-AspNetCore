@@ -52,7 +52,7 @@ namespace LancheMVC
             //var carrinhoCompraItem = _context.CarrinhoCompraItem.AsNoTracking().SingleOrDefault(
             //         s => s.Lanche.Id == lanche.Id &&
             //         s.CarrinhoCompraId == CarrinhoCompraId);
-            lanche.Id++;
+            
             if (carrinhoCompraItem == null)
             {
                  carrinhoCompraItem = new CarrinhoCompraItem
@@ -62,7 +62,14 @@ namespace LancheMVC
                     Quantidade = 1
                 };
                 _context.SaveChanges();
-                _context.CarrinhoCompraItem.Add(carrinhoCompraItem);
+
+
+
+                _context.CarrinhoCompraItem.Add(carrinhoCompraItem).State = EntityState.Detached;
+
+
+
+
                 _context.SaveChanges();
             }
             else
