@@ -41,6 +41,7 @@ public class Startup
 
 
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+        services.AddTransient<IPedidoRepository, PedidoRepository>();
         services.AddTransient<ILanches, RepositoryLanche>();
         services.AddTransient<ILancheServices, LancheService>();
         services.AddTransient<ICategoria, RepositoryCategoria>();

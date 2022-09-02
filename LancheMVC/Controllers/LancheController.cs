@@ -1,5 +1,6 @@
 ﻿using LancheMVC_Aplication.DTOs;
 using LancheMVC_Aplication.Interfaces;
+using LancheMVC_Domain;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -57,6 +58,38 @@ namespace LancheMVC.Controllers
         {
             var lanche = _lanches.PegarPorId(Id) ;
             return View(lanche);
+        }
+
+        public ViewResult Search(string searchString)
+        {
+            IEnumerable<LancheDTO> lanches;
+           
+            string categoriaAtual = string.Empty;
+
+            if (string.IsNullOrEmpty(searchString))
+            {
+                lanches = _lanches.RetornaTodosLanchesComCategoria();
+               
+
+                categoriaAtual = "Todos os Lanches";
+            }
+            else
+            {
+                lanches = _lanches.RetornaLanchePorNome(searchString);
+               
+               
+
+                if (lanches.Any())
+                    categoriaAtual = "Lanches";
+                else
+                    categoriaAtual = "Nenhum lanche foi encontrado";
+            }
+
+            return View("~/Views/Lanche/List.cshtml", new LancheListViewModel
+            {
+                lanches = lanches,
+                CategoriaAtual = categoriaAtual
+            });
         }
 
     }

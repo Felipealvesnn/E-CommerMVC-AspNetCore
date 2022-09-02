@@ -22,13 +22,17 @@ namespace LancheMVC_Aplication.Serviços
             var LancheID =  _lanche.PegaLanchePorId(id);
             return _mapper.Map<LancheDTO>(LancheID);
             
-            
 
         }
 
         public IEnumerable<LancheDTO> RetornaLanchePreferido()
         {
             var lanchepreferido = _lanche.RetornaLanchePreferido();
+            return _mapper.Map<IEnumerable<LancheDTO>>(lanchepreferido);
+        }
+        public IEnumerable<LancheDTO> RetornaLanchePorNome(string t)
+        {
+            var lanchepreferido = _lanche.RetornaLanchePorNome(t);
             return _mapper.Map<IEnumerable<LancheDTO>>(lanchepreferido);
         }
 

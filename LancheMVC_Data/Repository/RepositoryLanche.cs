@@ -19,10 +19,14 @@ namespace LancheMVC_Data.Repository
             // return _Ctx.Lanches.Find(id);
 
         }
-
+     
         public IEnumerable<Lanche> RetornaLanchePreferido()
         {
             return  _Ctx.Lanches.AsNoTracking().Where(l => l.IsLanchePreferido).Include(l => l.Categoria);
+        }
+        public IEnumerable<Lanche> RetornaLanchePorNome(string t)
+        {
+            return _Ctx.Lanches.Where(p => p.Nome.ToLower().Contains(t.ToLower()));
         }
 
         public  IEnumerable<Lanche> RetornaLancheComCategoria()
