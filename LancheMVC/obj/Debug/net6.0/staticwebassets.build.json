@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e/eLbyYrZOYfjVsqvrjsmQDDZibPVL2rNkHA5e+DHQ4=",
+  "Hash": "CrBAES5EOcJ7fm0tf7d3A56YvphhHDLBIQoDytvPOio=",
   "Source": "LancheMVC",
   "BasePath": "_content/LancheMVC",
   "Mode": "Default",
@@ -219,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Home-iconred.png"
+    },
+    {
+      "Identity": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC\\wwwroot\\images\\lanche.png",
+      "SourceId": "LancheMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC\\wwwroot\\",
+      "BasePath": "_content/LancheMVC",
+      "RelativePath": "images/lanche.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\lanche.png"
     },
     {
       "Identity": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC\\wwwroot\\images\\phone-app-icon.png",

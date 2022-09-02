@@ -15,7 +15,7 @@ Site de lanches em Aspnet/mvc
 
 
 
-<img src="./LancheMVC/wwwroot/images/lanche.png">
-        
+<img src="./LancheMVC/wwwroot/images/lanchesgif.gif">
+
 
 ## Ainda em desenvolvimento
