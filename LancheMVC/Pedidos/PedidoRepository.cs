@@ -29,14 +29,14 @@ namespace LancheMVC_Data.Repository
 
             var carrinhoCompraItens = _carrinhoCompra.CarrinhoCompraItems;
 
-            foreach (var carrinhoItem in carrinhoCompraItens)
+            foreach (var item in carrinhoCompraItens)
             {
                 var pedidoDetail = new PedidoDetalhe()
                 {
-                    Quantidade = carrinhoItem.Quantidade,
-                    LancheId = carrinhoItem.Lanche.Id,
+                    Quantidade = item.Quantidade,
+                    LancheId = item.Lanche.Id,
                     PedidoId = pedido.PedidoId,
-                    Preco = carrinhoItem.Lanche.Preco
+                    Preco = item.Lanche.Preco
                 };
                 _appDbContext.PedidoDetalhes.Add(pedidoDetail);
             }

@@ -20,7 +20,7 @@ namespace LancheMVC.Helps
                 IsLanchePreferido = model.IsLanchePreferido,
                 EmEstoque = model.EmEstoque,
                 CategoriaId = model.CategoriaId,
-
+                Categoria = model.Categoria,
 
             };
 
