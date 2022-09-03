@@ -44,7 +44,7 @@ namespace LancheMVC_Data.Migrations
 
                     b.HasIndex("LancheId");
 
-                    b.ToTable("CarrinhoCompraItens");
+                    b.ToTable("CarrinhoCompraItens", (string)null);
                 });
 
             modelBuilder.Entity("LancheMVC_Domain.Categoria", b =>
@@ -66,7 +66,7 @@ namespace LancheMVC_Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categorias");
+                    b.ToTable("Categorias", (string)null);
                 });
 
             modelBuilder.Entity("LancheMVC_Domain.Lanche", b =>
@@ -115,7 +115,7 @@ namespace LancheMVC_Data.Migrations
 
                     b.HasIndex("CategoriaId");
 
-                    b.ToTable("Lanches");
+                    b.ToTable("Lanches", (string)null);
                 });
 
             modelBuilder.Entity("LancheMVC_Domain.Pedido", b =>
@@ -182,7 +182,7 @@ namespace LancheMVC_Data.Migrations
 
                     b.HasKey("PedidoId");
 
-                    b.ToTable("Pedidos");
+                    b.ToTable("Pedidos", (string)null);
                 });
 
             modelBuilder.Entity("LancheMVC_Domain.PedidoDetalhe", b =>
@@ -211,7 +211,7 @@ namespace LancheMVC_Data.Migrations
 
                     b.HasIndex("PedidoId");
 
-                    b.ToTable("PedidoDetalhes");
+                    b.ToTable("PedidoDetalhes", (string)null);
                 });
 
             modelBuilder.Entity("LancheMVC_Domain.CarrinhoCompraItem", b =>

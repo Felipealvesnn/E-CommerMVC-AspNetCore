@@ -22,9 +22,9 @@ namespace LancheMVC_Aplication.Serviços
             _mapper = mapper;
         }
 
-        public async Task<CategoriaDTO> PegarPorId(int? id)
+        public  CategoriaDTO PegarPorId(int? id)
         {
-            var categories = await _Category.PegaPorId(id);
+            var categories =  _Category.PegaPorId(id);
             return _mapper.Map<CategoriaDTO>(categories);
         }
 

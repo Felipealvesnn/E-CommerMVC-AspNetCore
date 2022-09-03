@@ -38,13 +38,9 @@ namespace LancheMVC_Aplication.Serviços
 
         public IEnumerable<LancheDTO> RetornaTodos()
         {
-            var categoriesEntity =  _lanche.ReTornaTodos();
+            var categoriesEntity =  _lanche.RetornaLancheComCategoria();
             return  _mapper.Map<IEnumerable<LancheDTO>>(categoriesEntity);
         }
-        public IEnumerable<LancheDTO> RetornaTodosLanchesComCategoria()
-        {
-            var categoriesEntity =  _lanche.RetornaLancheComCategoria();
-            return _mapper.Map<IEnumerable<LancheDTO>>(categoriesEntity);
-        }
+      
     }
 }

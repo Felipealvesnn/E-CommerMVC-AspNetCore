@@ -6,7 +6,7 @@ namespace LancheMVC_Aplication.Interfaces
     public interface ICategoryServices
     {
         IEnumerable<CategoriaDTO> RetornaTodos();
-        Task<CategoriaDTO> PegarPorId(int? id);
+        CategoriaDTO PegarPorId(int? id);
      
     }
 }

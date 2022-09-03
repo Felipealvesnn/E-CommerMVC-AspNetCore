@@ -12,7 +12,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LancheMVC_Domain", "LancheM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LancheMVC_Data", "LancheMVC_Data\LancheMVC_Data.csproj", "{08D6C2E6-F0D7-4F84-8FFB-71C7D0560833}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LancheMVC_Aplication", "LancheMVC_Aplication\LancheMVC_Aplication.csproj", "{156F0ACD-DB26-49CE-86A3-20D361E07C6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LancheMVC_Aplication", "LancheMVC_Aplication\LancheMVC_Aplication.csproj", "{156F0ACD-DB26-49CE-86A3-20D361E07C6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

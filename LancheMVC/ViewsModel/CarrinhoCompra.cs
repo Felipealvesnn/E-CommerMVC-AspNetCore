@@ -48,14 +48,14 @@ namespace LancheMVC
 
         public void AdicionarAoCarrinho(Lanche lanche)
         {
-            CarrinhoCompraItem carrinhoCompraItem = null;
-            //var carrinhoCompraItem = _context.CarrinhoCompraItem.AsNoTracking().SingleOrDefault(
-            //         s => s.Lanche.Id == lanche.Id &&
-            //         s.CarrinhoCompraId == CarrinhoCompraId);
-            
+           
+            var carrinhoCompraItem = _context.CarrinhoCompraItem.AsNoTracking().SingleOrDefault(
+                     s => s.Lanche.Id == lanche.Id &&
+                     s.CarrinhoCompraId == CarrinhoCompraId);
+
             if (carrinhoCompraItem == null)
             {
-                 carrinhoCompraItem = new CarrinhoCompraItem
+                carrinhoCompraItem = new CarrinhoCompraItem
                 {
                     CarrinhoCompraId = CarrinhoCompraId,
                     Lanche = lanche,
@@ -64,13 +64,19 @@ namespace LancheMVC
                 _context.SaveChanges();
 
 
-
+                try { 
                 _context.CarrinhoCompraItem.Add(carrinhoCompraItem).State = EntityState.Detached;
+            }
+                catch (Exception ex)
+                {
+                   
+                    Console.WriteLine(ex);
+                   
+                }
 
 
 
-
-                _context.SaveChanges();
+                
             }
             else
             {
@@ -78,6 +84,7 @@ namespace LancheMVC
             }
             _context.SaveChanges();
         }
+
 
         public int RemoverDoCarrinho(Lanche lanche)
         {
@@ -128,5 +135,9 @@ namespace LancheMVC
                 .Select(c => c.Lanche.Preco * c.Quantidade).Sum();
             return total;
         }
+
+
+
+
     }
 }

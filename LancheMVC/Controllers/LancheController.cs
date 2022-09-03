@@ -27,7 +27,7 @@ namespace LancheMVC.Controllers
 
             if (string.IsNullOrEmpty(Category))
             {
-                lanches = _lanches.RetornaTodosLanchesComCategoria();
+                lanches = _lanches.RetornaTodos();
 
                 categoriaAtual = "Todos os lanches";
                 LanchesVM = new LancheListViewModel { lanches = lanches, CategoriaAtual = categoriaAtual };
@@ -35,7 +35,7 @@ namespace LancheMVC.Controllers
             else
             {
 
-                lanches = _lanches.RetornaTodosLanchesComCategoria();
+                lanches = _lanches.RetornaTodos();
                 LancheOrdenado = lanches.Where(l => l.Categoria.CategoryName.Equals(Category));
 
                 var tr = 50.0.porcentagemArrombada(23);
@@ -68,7 +68,7 @@ namespace LancheMVC.Controllers
 
             if (string.IsNullOrEmpty(searchString))
             {
-                lanches = _lanches.RetornaTodosLanchesComCategoria();
+                lanches = _lanches.RetornaTodos();
                
 
                 categoriaAtual = "Todos os Lanches";

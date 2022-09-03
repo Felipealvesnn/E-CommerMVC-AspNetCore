@@ -13,10 +13,10 @@ namespace LancheMVC_Data.Repository
         }
        
 
-        public Lanche PegaLanchePorId(int? id)
+        public Lanche PegaLanchePorId(int? testes)
         {
-              return _Ctx.Lanches.AsNoTracking().Include(c => c.Categoria).SingleOrDefault(p => p.Id == id);
-            // return _Ctx.Lanches.Find(id);
+              return _Ctx.Lanches.AsNoTracking().Include(c => c.Categoria).SingleOrDefault(p => p.Id == testes);
+            //return _Ctx.Lanches.Find(id);
 
         }
      
@@ -26,12 +26,12 @@ namespace LancheMVC_Data.Repository
         }
         public IEnumerable<Lanche> RetornaLanchePorNome(string t)
         {
-            return _Ctx.Lanches.Where(p => p.Nome.ToLower().Contains(t.ToLower()));
+            return _Ctx.Lanches.AsNoTracking().Where(p => p.Nome.ToLower().Contains(t.ToLower()));
         }
 
         public  IEnumerable<Lanche> RetornaLancheComCategoria()
         {
-            return  _Ctx.Lanches.AsNoTracking().Include(l => l.Categoria).ToList();
+            return _Ctx.Lanches.AsNoTracking().Include(l => l.Categoria).ToList();
         }
     }
 }
