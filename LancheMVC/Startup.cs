@@ -4,6 +4,7 @@ using LancheMVC_Aplication.Serviços;
 using LancheMVC_Data.Contexto;
 using LancheMVC_Data.Repository;
 using LancheMVC_Domain.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -40,6 +41,11 @@ public class Startup
         services.AddSession();
 
 
+        services.AddIdentity<IdentityUser, IdentityRole>()
+            .AddEntityFrameworkStores<AppDbContext>()
+            .AddDefaultTokenProviders();
+
+
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         services.AddTransient<IPedidoRepository, PedidoRepository>();
         services.AddTransient<ILanches, RepositoryLanche>();
@@ -70,6 +76,8 @@ public class Startup
         app.UseRouting();
 
         app.UseSession();//sessão inicializada
+
+        app.UseAuthentication();
 
         app.UseAuthorization();
 

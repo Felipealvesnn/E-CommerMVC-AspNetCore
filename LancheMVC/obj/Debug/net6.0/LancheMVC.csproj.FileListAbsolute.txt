@@ -546,3 +546,8 @@ C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.pdb
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.genruntimeconfig.cache
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\ref\LancheMVC.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
