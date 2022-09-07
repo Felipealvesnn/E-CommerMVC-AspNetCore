@@ -1,7 +1,7 @@
 ﻿using LancheMVC_Aplication.DTOs;
 using LancheMVC_Domain;
 
-namespace LancheMVC.Helps
+namespace LancheMVC
 {
     public static class MapNaMao
     {
@@ -47,5 +47,25 @@ namespace LancheMVC.Helps
 
         }
 
-    }
+        
+            public static IEnumerable<LancheDTO> TOLancheDTOEnumerable(this IEnumerable<Lanche> model)
+            {
+
+                return model.Select(p => new LancheDTO()
+                {
+                    Id = p.LancheId,
+                    Nome = p.Nome,
+                    DescricaoCurta = p.DescricaoCurta,
+                    DescricaoDetalhada = p.DescricaoDetalhada,
+                    Preco = p.Preco,
+                    ImagemUrl = p.ImagemUrl,
+                    ImagemThumbnailUrl = p.ImagemUrl,
+                    IsLanchePreferido = p.IsLanchePreferido,
+                    EmEstoque = p.EmEstoque,
+                    CategoriaId = p.CategoriaId,
+                    Categoria = p.Categoria,
+                });
+            }
+
+        }
 }

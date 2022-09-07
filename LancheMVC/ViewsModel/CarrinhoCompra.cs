@@ -1,9 +1,5 @@
-﻿using AutoMapper;
-using LancheMVC.Helps;
-using LancheMVC_Aplication.DTOs;
-using LancheMVC_Data.Contexto;
+﻿using LancheMVC_Data.Contexto;
 using LancheMVC_Domain;
-
 using Microsoft.EntityFrameworkCore;
 
 namespace LancheMVC
@@ -48,9 +44,9 @@ namespace LancheMVC
 
         public void AdicionarAoCarrinho(Lanche lanche)
         {
-           
-            var carrinhoCompraItem = _context.CarrinhoCompraItem.AsNoTracking().SingleOrDefault(
-                     s => s.Lanche.Id == lanche.Id &&
+
+            var carrinhoCompraItem = _context.CarrinhoCompraItem.SingleOrDefault(
+                     s => s.Lanche.LancheId == lanche.LancheId &&
                      s.CarrinhoCompraId == CarrinhoCompraId);
 
             if (carrinhoCompraItem == null)
@@ -61,28 +57,37 @@ namespace LancheMVC
                     Lanche = lanche,
                     Quantidade = 1
                 };
-                _context.SaveChanges();
+             
 
 
-                try { 
-                _context.CarrinhoCompraItem.Add(carrinhoCompraItem).State = EntityState.Detached;
-            }
+                try {
+                    _context.CarrinhoCompraItem.Add(carrinhoCompraItem);
+                }
                 catch (Exception ex)
                 {
-                   
+
                     Console.WriteLine(ex);
-                   
+
                 }
 
 
 
-                
+
             }
             else
             {
                 carrinhoCompraItem.Quantidade++;
             }
+            try { 
             _context.SaveChanges();
+        }
+
+              catch (Exception ex)
+            {
+
+                Console.WriteLine(ex);
+
+            }
         }
 
 
@@ -90,7 +95,7 @@ namespace LancheMVC
         {
            
             var carrinhoCompraItem = _context.CarrinhoCompraItem.SingleOrDefault(
-                   s => s.Lanche.Id == lanche.Id &&
+                   s => s.Lanche.LancheId == lanche.LancheId &&
                    s.CarrinhoCompraId == CarrinhoCompraId);
 
             var quantidadeLocal = 0;

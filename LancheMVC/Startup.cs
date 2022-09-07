@@ -28,6 +28,7 @@ public class Startup
 
         services.AddDbContext<AppDbContext>(options =>
         {
+            options.EnableSensitiveDataLogging();
         options.UseSqlServer(Configuration.GetConnectionString("coneccaoDB"),
             b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName));
         options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);

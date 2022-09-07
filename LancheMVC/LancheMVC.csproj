@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Helps\**" />
+    <Content Remove="Helps\**" />
+    <EmbeddedResource Remove="Helps\**" />
+    <None Remove="Helps\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <_ContentIncludedByDefault Remove="wwwroot\images\lanchesgif.gif" />
   </ItemGroup>
 

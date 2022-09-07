@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using LancheMVC;
 using LancheMVC_Aplication.DTOs;
 using LancheMVC_Aplication.Interfaces;
 using LancheMVC_Domain.Interfaces;
@@ -20,26 +21,28 @@ namespace LancheMVC_Aplication.Serviços
         public LancheDTO PegarPorId(int? id)
         {
             var LancheID =  _lanche.PegaLanchePorId(id);
-            return _mapper.Map<LancheDTO>(LancheID);
-            
+            return LancheID.TOLancheDTO();
+
+
 
         }
 
         public IEnumerable<LancheDTO> RetornaLanchePreferido()
         {
             var lanchepreferido = _lanche.RetornaLanchePreferido();
-            return _mapper.Map<IEnumerable<LancheDTO>>(lanchepreferido);
+            return lanchepreferido.TOLancheDTOEnumerable();
         }
         public IEnumerable<LancheDTO> RetornaLanchePorNome(string t)
         {
             var lanchepreferido = _lanche.RetornaLanchePorNome(t);
-            return _mapper.Map<IEnumerable<LancheDTO>>(lanchepreferido);
+
+            return lanchepreferido.TOLancheDTOEnumerable();
         }
 
         public IEnumerable<LancheDTO> RetornaTodos()
         {
             var categoriesEntity =  _lanche.RetornaLancheComCategoria();
-            return  _mapper.Map<IEnumerable<LancheDTO>>(categoriesEntity);
+            return categoriesEntity.TOLancheDTOEnumerable();
         }
       
     }

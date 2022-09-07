@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace LancheMVC_Domain
 {
-    public class Lanche : Entity
+    public class Lanche 
     {
+        public int LancheId { get; set; }
         public string Nome { get; set; }
         public string DescricaoCurta { get; set; }
         public string DescricaoDetalhada { get; set; }

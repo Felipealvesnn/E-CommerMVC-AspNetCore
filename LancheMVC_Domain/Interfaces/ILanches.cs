@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LancheMVC_Domain.Interfaces
 {
-    public interface ILanches: IRepository<Lanche>
+    public interface ILanches
     {
         IEnumerable<Lanche> RetornaLanchePreferido ();
         Lanche PegaLanchePorId(int? id);

@@ -18,10 +18,10 @@ namespace LancheMVC_Data.Contexto
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<PedidoDetalhe> PedidoDetalhes { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(modelBuilder);
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+            base.OnModelCreating(builder);
+            builder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
          
         }
 

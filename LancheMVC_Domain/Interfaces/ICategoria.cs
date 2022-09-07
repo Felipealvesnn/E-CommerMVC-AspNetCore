@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LancheMVC_Domain.Interfaces
 {
-    public interface ICategoria : IRepository<Categoria>
+    public interface ICategoria 
     {
+        IEnumerable<Categoria> ReTornaTodos();
+        Categoria PegaPorId(int? id);
     }
 }

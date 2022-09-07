@@ -54,7 +54,41 @@ namespace LancheMVC.Controllers
 
         }
 
-
-
+        public IActionResult Register()
+        {
+            return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(LoginVM loginVM)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new IdentityUser { UserName = loginVM.UserName };
+                var result = await _userManager.CreateAsync(user, loginVM.Password);
+
+                if (result.Succeeded)
+                {
+                    //await _signInManager.SignInAsync(user, isPersistent: false);
+                    return RedirectToAction("Login", "Account");
+                }
+                else
+                {
+                    this.ModelState.AddModelError("Registro", "Falha ao registrar o usuário");
+                }
+            }
+            return View(loginVM);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Logout() {
+            HttpContext.Session.Clear();
+            HttpContext.User = null;
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        
+        }
+
+
+    }
 }

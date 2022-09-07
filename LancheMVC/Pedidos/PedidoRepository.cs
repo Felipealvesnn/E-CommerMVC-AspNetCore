@@ -34,7 +34,7 @@ namespace LancheMVC_Data.Repository
                 var pedidoDetail = new PedidoDetalhe()
                 {
                     Quantidade = item.Quantidade,
-                    LancheId = item.Lanche.Id,
+                    LancheId = item.Lanche.LancheId,
                     PedidoId = pedido.PedidoId,
                     Preco = item.Lanche.Preco
                 };

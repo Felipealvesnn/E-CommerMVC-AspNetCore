@@ -13,7 +13,7 @@ namespace LancheMVC_Data.EntitiesConfiguration
     {
         public void Configure(EntityTypeBuilder<Lanche> builder)
         {
-            builder.HasKey(x => x.Id);
+            builder.HasKey(x => x.LancheId);
             builder.Property(x => x.Nome).HasMaxLength(100).IsRequired();
             builder.Property(c => c.DescricaoDetalhada).HasMaxLength(200).IsRequired();
             builder.Property(c => c.DescricaoCurta).HasMaxLength(100).IsRequired();
