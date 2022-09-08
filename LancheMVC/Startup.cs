@@ -36,6 +36,17 @@ public class Startup
         });
 
 
+        //services.Configure<IdentityOptions>(options =>
+        //{
+        //    // Default Password settings.
+        //    options.Password.RequireDigit = false;
+        //    options.Password.RequireLowercase = false;
+        //    options.Password.RequireNonAlphanumeric = false;
+        //    options.Password.RequireUppercase = false;
+        //    options.Password.RequiredLength = 3;
+        //    options.Password.RequiredUniqueChars = 1;
+        //});
+
 
         services.AddControllersWithViews();
         services.AddMemoryCache();
@@ -84,7 +95,13 @@ public class Startup
 
         app.UseEndpoints(endpoints =>
         {
-           
+
+            endpoints.MapControllerRoute(
+                   name: "areas",
+                   pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                 );
+
+
 
 
             endpoints.MapControllerRoute(
@@ -96,6 +113,8 @@ public class Startup
             endpoints.MapControllerRoute(
                name: "default",
                pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
 
 
 

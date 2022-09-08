@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using LancheMVC.Helps;
 using Microsoft.EntityFrameworkCore;
 using LancheMVC_Data.Repository;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LancheMVC.Controllers
 {
+    [Authorize]
     public class CarrinhoCompraController : Controller
     {
         private readonly ILancheServices _lanches;
@@ -34,6 +36,7 @@ namespace LancheMVC.Controllers
 
             return View(carrinhoCompraVM);
         }
+       
         public RedirectToActionResult AdicionarItemNoCarrinho(int lancheId)
         {
             
