@@ -16,14 +16,11 @@ namespace LancheMVC.Controllers
             _logger = logger;
         }
 
-      
-
         public IActionResult Index()
         {
             var homeVm = new HomeVM { lanchePreferido = _lanches.RetornaLanchePreferido() };
 
             return View(homeVm);
-           
         }
 
         public IActionResult Privacy()

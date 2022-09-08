@@ -15,16 +15,13 @@ namespace LancheMVC.Controllers
             _signInManager = signInManager;
         }
 
-        public IActionResult Login(string url) {
-
-
-
-            return View(new LoginVM() {
+        public IActionResult Login(string url)
+        {
+            return View(new LoginVM()
+            {
                 ReturnURL = url
-
             });
         }
-
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginVM loginVM)
@@ -33,25 +30,21 @@ namespace LancheMVC.Controllers
                 return View(loginVM);
             var user = await _userManager.FindByNameAsync(loginVM.UserName);
 
-            if (user != null) {
-
+            if (user != null)
+            {
                 var result = await _signInManager.PasswordSignInAsync(user, loginVM.Password, false, false);
                 if (result.Succeeded)
                 {
-                    if (string.IsNullOrEmpty(loginVM.ReturnURL)) {
+                    if (string.IsNullOrEmpty(loginVM.ReturnURL))
+                    {
                         return RedirectToAction("Index", "Home");
-
                     }
                     return Redirect(loginVM.ReturnURL);
-
                 }
             }
 
             ModelState.AddModelError("", "Falha ao realizar o login!!");
             return View(loginVM);
-
-
-
         }
 
         public IActionResult Register()
@@ -80,15 +73,14 @@ namespace LancheMVC.Controllers
             }
             return View(loginVM);
         }
+
         [HttpPost]
-        public async Task<IActionResult> Logout() {
+        public async Task<IActionResult> Logout()
+        {
             HttpContext.Session.Clear();
             HttpContext.User = null;
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
-        
         }
-
-
     }
 }

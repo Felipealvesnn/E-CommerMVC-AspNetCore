@@ -2,25 +2,21 @@
 using LancheMVC_Data.Contexto;
 using LancheMVC_Domain;
 using LancheMVC_Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LancheMVC_Data.Repository
 {
     public class PedidoRepository : IPedidoRepository
     {
-
         private readonly AppDbContext _appDbContext;
         private readonly CarrinhoCompra _carrinhoCompra;
+
         public PedidoRepository(AppDbContext appDbContext,
            CarrinhoCompra carrinhoCompra)
         {
             _appDbContext = appDbContext;
             _carrinhoCompra = carrinhoCompra;
         }
+
         public void CriarPedido(Pedido pedido)
         {
             pedido.PedidoEnviado = DateTime.Now;

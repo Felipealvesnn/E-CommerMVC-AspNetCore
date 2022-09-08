@@ -6,9 +6,9 @@ using LancheMVC_Data.Repository;
 using LancheMVC_Domain.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace LancheMVC;
+
 public class Startup
 {
     public Startup(IConfiguration configuration)
@@ -23,18 +23,16 @@ public class Startup
     {
         //services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("coneccaoDB"),
         //    b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName))
-        
+
         //);
 
         services.AddDbContext<AppDbContext>(options =>
         {
             options.EnableSensitiveDataLogging();
-        options.UseSqlServer(Configuration.GetConnectionString("coneccaoDB"),
-            b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName));
-        options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-       
+            options.UseSqlServer(Configuration.GetConnectionString("coneccaoDB"),
+                b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName));
+            options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
         });
-
 
         //services.Configure<IdentityOptions>(options =>
         //{
@@ -47,16 +45,13 @@ public class Startup
         //    options.Password.RequiredUniqueChars = 1;
         //});
 
-
         services.AddControllersWithViews();
         services.AddMemoryCache();
         services.AddSession();
 
-
         services.AddIdentity<IdentityUser, IdentityRole>()
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();
-
 
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         services.AddTransient<IPedidoRepository, PedidoRepository>();
@@ -95,29 +90,20 @@ public class Startup
 
         app.UseEndpoints(endpoints =>
         {
-
             endpoints.MapControllerRoute(
                    name: "areas",
                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
                  );
 
-
-
-
             endpoints.MapControllerRoute(
             name: "CategoriaFiltro",
             pattern: "Lanche/{action}/{Categoria?}",
-            defaults: new { controller = "Lanche", Action="List" }
+            defaults: new { controller = "Lanche", Action = "List" }
             );
 
             endpoints.MapControllerRoute(
                name: "default",
                pattern: "{controller=Home}/{action=Index}/{id?}");
-
-
-
-
-
         });
     }
 }

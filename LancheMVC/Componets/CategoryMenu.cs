@@ -1,6 +1,5 @@
 ﻿using LancheMVC_Aplication.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace LancheMVC.Componets
 {
@@ -12,13 +11,12 @@ namespace LancheMVC.Componets
         {
             _categoryServices = categoryServices;
         }
+
         public IViewComponentResult Invoke()
         {
-            var categoria =  _categoryServices.RetornaTodos();
+            var categoria = _categoryServices.RetornaTodos();
 
             return View(categoria);
-
-
         }
     }
 }

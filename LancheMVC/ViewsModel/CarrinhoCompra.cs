@@ -7,10 +7,7 @@ namespace LancheMVC
     public class CarrinhoCompra
     {
         private readonly AppDbContext _context;
-       
-     
 
-       
         public CarrinhoCompra(AppDbContext context)
         {
             _context = context;
@@ -18,7 +15,6 @@ namespace LancheMVC
 
         public string CarrinhoCompraId { get; set; }
         public List<CarrinhoCompraItem> CarrinhoCompraItems { get; set; }
-       
 
         public static CarrinhoCompra GetCarrinho(IServiceProvider services)
         {
@@ -26,7 +22,7 @@ namespace LancheMVC
             ISession session =
                 services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
 
-            //obtem um serviço do tipo do nosso contexto 
+            //obtem um serviço do tipo do nosso contexto
             var context = services.GetService<AppDbContext>();
 
             //obtem ou gera o Id do carrinho
@@ -44,7 +40,6 @@ namespace LancheMVC
 
         public void AdicionarAoCarrinho(Lanche lanche)
         {
-
             var carrinhoCompraItem = _context.CarrinhoCompraItem.SingleOrDefault(
                      s => s.Lanche.LancheId == lanche.LancheId &&
                      s.CarrinhoCompraId == CarrinhoCompraId);
@@ -57,43 +52,32 @@ namespace LancheMVC
                     Lanche = lanche,
                     Quantidade = 1
                 };
-             
 
-
-                try {
+                try
+                {
                     _context.CarrinhoCompraItem.Add(carrinhoCompraItem);
                 }
                 catch (Exception ex)
                 {
-
                     Console.WriteLine(ex);
-
                 }
-
-
-
-
             }
             else
             {
                 carrinhoCompraItem.Quantidade++;
             }
-            try { 
-            _context.SaveChanges();
-        }
-
-              catch (Exception ex)
+            try
             {
-
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
                 Console.WriteLine(ex);
-
             }
         }
 
-
         public int RemoverDoCarrinho(Lanche lanche)
         {
-           
             var carrinhoCompraItem = _context.CarrinhoCompraItem.SingleOrDefault(
                    s => s.Lanche.LancheId == lanche.LancheId &&
                    s.CarrinhoCompraId == CarrinhoCompraId);
@@ -129,7 +113,7 @@ namespace LancheMVC
         {
             var carrinhoItens = _context.CarrinhoCompraItem
                                  .Where(carrinho => carrinho.CarrinhoCompraId == CarrinhoCompraId);
-           
+
             _context.CarrinhoCompraItem.RemoveRange(carrinhoItens);
             _context.SaveChanges();
         }
@@ -140,9 +124,5 @@ namespace LancheMVC
                 .Select(c => c.Lanche.Preco * c.Quantidade).Sum();
             return total;
         }
-
-
-
-
     }
 }

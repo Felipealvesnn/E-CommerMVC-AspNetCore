@@ -1,5 +1,4 @@
-﻿using LancheMVC_Domain;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace LancheMVC.Componets
 {
@@ -12,9 +11,9 @@ namespace LancheMVC.Componets
             _carrrinhoCompra = carrrinhoCompra;
         }
 
-        public IViewComponentResult Invoke() {
-
-             var itens = _carrrinhoCompra.GetCarrinhoCompraItens();
+        public IViewComponentResult Invoke()
+        {
+            var itens = _carrrinhoCompra.GetCarrinhoCompraItens();
 
             //var itens = new List<CarrinhoCompraItem>() {
             //new CarrinhoCompraItem(),
@@ -28,13 +27,9 @@ namespace LancheMVC.Componets
             {
                 CarrinhoCompra = _carrrinhoCompra,
                 CarrinhoCompraTotal = _carrrinhoCompra.GetCarrinhoCompraTotal(),
-
             };
 
             return View(carrinhoCompraVM);
-
-
         }
-
     }
 }
