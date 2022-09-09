@@ -59,11 +59,14 @@ namespace LancheMVC.Controllers
             if (ModelState.IsValid)
             {
                 var user = new IdentityUser { UserName = loginVM.UserName };
+                
                 var result = await _userManager.CreateAsync(user, loginVM.Password);
 
                 if (result.Succeeded)
                 {
                     //await _signInManager.SignInAsync(user, isPersistent: false);
+
+                    await _userManager.AddToRoleAsync(user, "Member");
                     return RedirectToAction("Login", "Account");
                 }
                 else

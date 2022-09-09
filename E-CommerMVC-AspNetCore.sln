@@ -14,6 +14,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LancheMVC_Data", "LancheMVC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LancheMVC_Aplication", "LancheMVC_Aplication\LancheMVC_Aplication.csproj", "{156F0ACD-DB26-49CE-86A3-20D361E07C6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LancheMV_InfraIOC", "LancheMV_InfraIOC\LancheMV_InfraIOC.csproj", "{469C4D98-54BC-410E-96DE-4BCEE62E5A5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{156F0ACD-DB26-49CE-86A3-20D361E07C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{156F0ACD-DB26-49CE-86A3-20D361E07C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{156F0ACD-DB26-49CE-86A3-20D361E07C6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{469C4D98-54BC-410E-96DE-4BCEE62E5A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{469C4D98-54BC-410E-96DE-4BCEE62E5A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{469C4D98-54BC-410E-96DE-4BCEE62E5A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{469C4D98-54BC-410E-96DE-4BCEE62E5A5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
