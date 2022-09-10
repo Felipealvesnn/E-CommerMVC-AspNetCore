@@ -44,6 +44,23 @@ namespace LancheMVC_Aplication.Serviços
             var categoriesEntity =  _lanche.RetornaLancheComCategoria();
             return categoriesEntity.TOLancheDTOEnumerable();
         }
-      
+
+        public void Add(LancheDTO productDTO)
+        {
+            
+            _lanche.Adicionar(productDTO.TOLanche());
+        }
+
+        public void Update(LancheDTO productDTO)
+        {
+            _lanche.Atualizar(productDTO.TOLanche());
+        }
+
+        public void Delete(int? id)
+        {
+            var categoryEntity = _lanche.PegaLanchePorId(id);
+            
+            _lanche.Remover(categoryEntity);
+        }
     }
 }

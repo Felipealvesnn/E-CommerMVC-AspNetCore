@@ -15,6 +15,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminCategorias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminLanches/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5MYW5jaGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminLanches/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5MYW5jaGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminLanches/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5MYW5jaGVzXF9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -29,6 +45,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Account/Login.cshtml]

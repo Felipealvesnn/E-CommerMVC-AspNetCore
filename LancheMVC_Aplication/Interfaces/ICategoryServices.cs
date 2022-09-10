@@ -7,6 +7,9 @@ namespace LancheMVC_Aplication.Interfaces
     {
         IEnumerable<CategoriaDTO> RetornaTodos();
         CategoriaDTO PegarPorId(int? id);
-     
+        void Add(CategoriaDTO categoryDTO);
+        void Update(CategoriaDTO categoryDTO);
+        void Remove(int? id);
+
     }
 }

@@ -12,6 +12,9 @@ namespace LancheMVC_Domain.Interfaces
         Lanche PegaLanchePorId(int? id);
         IEnumerable<Lanche> RetornaLancheComCategoria();
         IEnumerable<Lanche> RetornaLanchePorNome(string t);
+        void  Adicionar(Lanche lanche);
+        void  Atualizar(Lanche lanche);
+        void  Remover(Lanche lanche);
 
     }
 }

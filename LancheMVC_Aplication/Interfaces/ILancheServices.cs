@@ -14,6 +14,9 @@ namespace LancheMVC_Aplication.Interfaces
         LancheDTO PegarPorId(int? id);
         IEnumerable<LancheDTO> RetornaLanchePreferido();
         IEnumerable<LancheDTO> RetornaLanchePorNome(string t);
-      
+        void Add(LancheDTO productDTO);
+        void Update(LancheDTO productDTO);
+        void Delete(int? id);
+
     }
 }

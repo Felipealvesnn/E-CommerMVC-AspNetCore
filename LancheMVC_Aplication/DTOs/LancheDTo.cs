@@ -17,13 +17,13 @@ namespace LancheMVC_Aplication.DTOs
 
         [Required(ErrorMessage = "A descrição do lanche deve ser informada")]
         [Display(Name = "Descrição do Lanche")]
-        [MinLength(20, ErrorMessage = "Descrição deve ter no mínimo {1} caracteres")]
+        //[MinLength(20, ErrorMessage = "Descrição deve ter no mínimo {1} caracteres")]
         [MaxLength(200, ErrorMessage = "Descrição pode exceder {1} caracteres")]
         public string DescricaoCurta { get; set; }
 
         [Required(ErrorMessage = "O descrição detalhada do lanche deve ser informada")]
         [Display(Name = "Descrição detalhada do Lanche")]
-        [MinLength(20, ErrorMessage = "Descrição detalhada deve ter no mínimo {1} caracteres")]
+        //[MinLength(20, ErrorMessage = "Descrição detalhada deve ter no mínimo {1} caracteres")]
         [MaxLength(200, ErrorMessage = "Descrição detalhada pode exceder {1} caracteres")]
         public string DescricaoDetalhada { get; set; }
 
@@ -48,9 +48,8 @@ namespace LancheMVC_Aplication.DTOs
         public bool EmEstoque { get; set; }
 
         public int CategoriaId { get; set; }
-        [JsonIgnore]
-        public  Categoria Categoria { get; set; }
 
-   
+        [JsonIgnore]
+        public Categoria Categoria { get; set; }
     }
 }

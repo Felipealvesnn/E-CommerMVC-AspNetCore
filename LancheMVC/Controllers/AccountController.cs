@@ -29,10 +29,11 @@ namespace LancheMVC.Controllers
             if (!ModelState.IsValid)
                 return View(loginVM);
             var user = await _userManager.FindByNameAsync(loginVM.UserName);
-
+            
             if (user != null)
             {
                 var result = await _signInManager.PasswordSignInAsync(user, loginVM.Password, false, false);
+                
                 if (result.Succeeded)
                 {
                     if (string.IsNullOrEmpty(loginVM.ReturnURL))
@@ -59,7 +60,7 @@ namespace LancheMVC.Controllers
             if (ModelState.IsValid)
             {
                 var user = new IdentityUser { UserName = loginVM.UserName };
-                
+
                 var result = await _userManager.CreateAsync(user, loginVM.Password);
 
                 if (result.Succeeded)
@@ -84,6 +85,10 @@ namespace LancheMVC.Controllers
             HttpContext.User = null;
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
+        }
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
     }
 }

@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - LancheMVC</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="~/LancheMVC.styles.css" asp-append-version="true" />
     <script src="https://kit.fontawesome.com/ddb983a3c3.js" crossorigin="anonymous"></script>
 </head>
@@ -30,6 +31,10 @@
                         </div>
                     </form>
                     @await Html.PartialAsync("_LoginPartial")
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a class="nav-link text-light" asp-area="Admin" asp-controller="Admin" asp-action="Index">Area de Admin</a>
+                    }
                     
                 </div>
             </div>

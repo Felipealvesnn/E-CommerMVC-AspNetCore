@@ -64,9 +64,6 @@ public class Startup
                 });
         });
 
-
-
-
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         services.AddTransient<IPedidoRepository, PedidoRepository>();
         services.AddTransient<ILanches, RepositoryLanche>();
@@ -96,7 +93,6 @@ public class Startup
         app.UseStaticFiles();
 
         app.UseRouting();
-
 
         //usado para incluir as roles e os usuarios
         seedUserRoleInitial.SeedRole();

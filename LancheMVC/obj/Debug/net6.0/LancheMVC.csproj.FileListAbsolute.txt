@@ -272,15 +272,6 @@ C:\Users\Rudrex\OneDrive\Área de Trabalho\mvc aspnet framework\LancheMVC\Lanche
 C:\Users\Rudrex\OneDrive\Área de Trabalho\mvc aspnet framework\LancheMVC\LancheMVC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Rudrex\OneDrive\Área de Trabalho\mvc aspnet framework\LancheMVC\LancheMVC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Rudrex\OneDrive\Área de Trabalho\mvc aspnet framework\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.csproj.AssemblyReference.cache
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.AssemblyInfoInputs.cache
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.AssemblyInfo.cs
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.csproj.CoreCompileInputs.cache
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.RazorAssemblyInfo.cache
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.RazorAssemblyInfo.cs
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\appsettings.json
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\LancheMVC.staticwebassets.runtime.json
@@ -540,6 +531,15 @@ C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\LancheMVC_Aplication.pdb
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\LancheMVC_Data.pdb
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\LancheMVC_Domain.pdb
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.csproj.AssemblyReference.cache
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.AssemblyInfoInputs.cache
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.AssemblyInfo.cs
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.csproj.CoreCompileInputs.cache
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.RazorAssemblyInfo.cache
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.RazorAssemblyInfo.cs
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css

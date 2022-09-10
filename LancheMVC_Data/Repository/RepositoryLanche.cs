@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LancheMVC_Data.Repository
 {
-    public class RepositoryLanche :  ILanches
+    public class RepositoryLanche : ILanches
     {
         public readonly AppDbContext _Ctx;
 
@@ -14,26 +14,43 @@ namespace LancheMVC_Data.Repository
             _Ctx = ctx;
         }
 
-
         public Lanche PegaLanchePorId(int? testes)
         {
-              return _Ctx.Lanches.Include(c => c.Categoria).SingleOrDefault(p => p.LancheId == testes);
+            return _Ctx.Lanches.Include(c => c.Categoria).SingleOrDefault(p => p.LancheId == testes);
             //return _Ctx.Lanches.Find(id);
-
         }
-     
+
         public IEnumerable<Lanche> RetornaLanchePreferido()
         {
-            return  _Ctx.Lanches.Where(l => l.IsLanchePreferido).Include(l => l.Categoria);
+            return _Ctx.Lanches.Where(l => l.IsLanchePreferido).Include(l => l.Categoria);
         }
+
         public IEnumerable<Lanche> RetornaLanchePorNome(string t)
         {
             return _Ctx.Lanches.Where(p => p.Nome.ToLower().Contains(t.ToLower()));
         }
 
-        public  IEnumerable<Lanche> RetornaLancheComCategoria()
+        public IEnumerable<Lanche> RetornaLancheComCategoria()
         {
             return _Ctx.Lanches.Include(l => l.Categoria).ToList();
+        }
+
+        public void Adicionar(Lanche lanche)
+        {
+            _Ctx.Add(lanche);
+            _Ctx.SaveChanges();
+        }
+
+        public void Atualizar(Lanche lanche)
+        {
+            _Ctx.Update(lanche);
+            _Ctx.SaveChanges();
+        }
+
+        public void Remover(Lanche lanche)
+        {
+            _Ctx.Remove(lanche);
+            _Ctx.SaveChanges();
         }
     }
 }
