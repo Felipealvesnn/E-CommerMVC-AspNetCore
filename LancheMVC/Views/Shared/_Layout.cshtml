@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/ddb983a3c3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+@*    <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3 ">
             <div class="container-fluid w-75">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">LancheMVC</a>
@@ -39,7 +39,40 @@
                 </div>
             </div>
         </nav>
+    </header>*@
+
+
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <i class="fa-solid fa-house h2"></i>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li> <a class="nav-link text-light" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a></li>
+                    <li><a class="nav-link text-light" asp-area="" asp-controller="Lanche" asp-action="List">Lanches</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                </ul>
+                @await Component.InvokeAsync("CarrinhoCompraResumo")
+                @await Component.InvokeAsync("CategoryMenu")
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" asp-controller="Lanche" asp-action="Search" method="get">
+                    <input type="text" class="form-control form-control-dark" placeholder="Search..." name="searchString" value="@ViewData["searchString"]">
+                   
+                </form>
+
+                @await Html.PartialAsync("_LoginPartial")
+            </div>
+        </div>
     </header>
+
+
+
+
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

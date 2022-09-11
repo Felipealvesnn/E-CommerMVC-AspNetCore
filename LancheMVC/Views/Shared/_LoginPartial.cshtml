@@ -1,23 +1,44 @@
 ﻿@using Microsoft.AspNetCore.Identity
 
 @inject SignInManager<IdentityUser> SignInManager
-@if (SignInManager.IsSignedIn(User)) { 
-    <form asp-area="" asp-controller="Account" asp-action="Logout" id="LogoutForm" method="post" class="navbaar-left">
-        <ul class="nav navar-nav navbar-left">
-            <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
-                Logout: @User.Identity.Name &nbsp;
-            </button>
 
-        </ul>
 
-    </form>
+
+@if (SignInManager.IsSignedIn(User))
+{
+        <div class="dropdown text-end">
+            <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://avatars.githubusercontent.com/u/88728350?s=400&u=3f1fb1f47fc18e90605ebc54b2ecddf07e528e12&v=4" alt="mdo" width="35" height="35" class="rounded-circle">
+            </a>
+            
+            <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
+                <li><a class="dropdown-item" href="#">@User.Identity.Name &nbsp;</a></li>
+            @if (User.IsInRole("Admin"))
+            {
+                 <li> <a class="dropdown-item" asp-area="Admin" asp-controller="Admin" asp-action="Index">Admin</a></li>
+            }
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                    <form asp-area="" asp-controller="Account" asp-action="Logout" id="LogoutForm" method="post" class="">
+
+                            <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
+                                <p class="dropdown-item">Sign out</p>
+                            </button>
+
+
+                    </form>
+
+                </li>
+            </ul>
+        </div>
+
 
 }
-else{
-    <ul class="nav navbar-nav navbar-left">
-        <a class="nav-link text-light" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@string.Format("{0}{1}",Context.Request.Path, Context.Request.QueryString)" style="color:white">&nbsp; Log in&nbsp; </a>
-       @* <a class="nav-link text-light" asp-controller="Account" asp-action="Register" style="color:white">&nbsp;Registro&nbsp;&nbsp;&nbsp; </a>*@
-    </ul>
-
+else
+{
+        <div class="text-end">
+            <a asp-controller="Account" asp-action="Login" asp-route-returnUrl="@string.Format("{0}{1}",Context.Request.Path, Context.Request.QueryString)"  class="btn btn-outline-light me-2">Login</a>
+            <a type="button" asp-controller="Account" asp-action="Register" class="btn btn-warning">Register</a>
+        </div>
 }
-

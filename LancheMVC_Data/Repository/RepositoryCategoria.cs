@@ -20,14 +20,32 @@ namespace LancheMVC_Data.Repository
             _Ctx = ctx;
         }
 
+        public void Adicionar(Categoria categoria)
+        {
+            _Ctx.Add(categoria);
+            _Ctx.SaveChanges();
+        }
+
+        public void Atualizar(Categoria categoria)
+        {
+            _Ctx.Update(categoria);
+            _Ctx.SaveChanges();
+        }
+
         public Categoria PegaPorId(int? id)
         {
             return _Ctx.Categorias.AsNoTracking().SingleOrDefault(p => p.CategoriaId == id);
         }
 
+        public void Remover(Categoria categoria)
+        {
+            _Ctx.Remove(categoria);
+            _Ctx.SaveChanges();
+        }
+
         public IEnumerable<Categoria> ReTornaTodos()
         {
-            return _Ctx.Categorias.AsNoTracking().ToList();
+            return _Ctx.Categorias.ToList();
         }
     }
 }

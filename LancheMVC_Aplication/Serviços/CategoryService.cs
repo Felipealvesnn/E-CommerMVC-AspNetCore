@@ -22,16 +22,33 @@ namespace LancheMVC_Aplication.Serviços
             _mapper = mapper;
         }
 
+        public void Add(CategoriaDTO categoryDTO)
+        {
+            _Category.Adicionar(_mapper.Map<Categoria>(categoryDTO));
+        }
+
         public  CategoriaDTO PegarPorId(int? id)
         {
             var categories =  _Category.PegaPorId(id);
             return _mapper.Map<CategoriaDTO>(categories);
         }
 
+        public void Remove(int? id)
+        {
+            var categoryEntity = _Category.PegaPorId(id);
+
+            _Category.Remover(categoryEntity);
+        }
+
         public  IEnumerable<CategoriaDTO> RetornaTodos()
         {
             var categories =  _Category.ReTornaTodos();
             return  _mapper.Map<IEnumerable<CategoriaDTO>>(categories);
+        }
+
+        public void Update(CategoriaDTO categoryDTO)
+        {
+            _Category.Atualizar(_mapper.Map<Categoria>(categoryDTO));
         }
     }
 }

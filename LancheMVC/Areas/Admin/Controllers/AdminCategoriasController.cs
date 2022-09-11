@@ -21,7 +21,7 @@ namespace LancheMVC.Areas.Admin.Controllers
         public IActionResult Index()
         {
             var todeslanches = _Categorias.RetornaTodos();
-            var ordenados = todeslanches.OrderBy(d => d.Id);
+            var ordenados = todeslanches.OrderBy(d => d.CategoriaId);
             return View(ordenados);
         }
     }

@@ -7,7 +7,7 @@ namespace LancheMVC_Aplication.DTOs
     public class CategoriaDTO
     {
         [Key]
-        public int Id { get; set; }
+        public int CategoriaId { get; set; }
 
         [StringLength(100, ErrorMessage = "O tamanho máximo é 100 caracteres")]
         [Required(ErrorMessage = "Informe o nome da categoria")]
