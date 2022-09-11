@@ -55,7 +55,7 @@ namespace LancheMVC.Controllers
             if (ModelState.IsValid)
             {
                 //cria o pedido e os detalhes
-                _pedidoRepository.CriarPedido(pedido);
+                _pedidoRepository.Adicionar(pedido);
 
                 //define mensagens ao cliente
                 ViewBag.CheckoutCompletoMensagem = "Obrigado pelo seu pedido :)";

@@ -1,6 +1,8 @@
 ﻿using LancheMVC_Data.Contexto;
 using LancheMVC_Domain;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace LancheMVC
 {

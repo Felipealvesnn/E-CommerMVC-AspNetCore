@@ -1,12 +1,14 @@
 ﻿using LancheMVC_Aplication.DTOs;
 using LancheMVC_Aplication.Interfaces;
 using LancheMVC_Domain.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LancheMVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize("Admin")]
     public class AdminLanchesController : Controller
     {
         private readonly ILancheServices _lanches;

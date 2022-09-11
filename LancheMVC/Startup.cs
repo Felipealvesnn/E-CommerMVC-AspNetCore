@@ -1,4 +1,5 @@
-﻿using LancheMVC_Aplication.Interfaces;
+﻿using LancheMV_InfraIOC;
+using LancheMVC_Aplication.Interfaces;
 using LancheMVC_Aplication.Maps;
 using LancheMVC_Aplication.Serviços;
 using LancheMVC_Data.Contexto;
@@ -28,30 +29,17 @@ public class Startup
 
         //);
 
-        services.AddDbContext<AppDbContext>(options =>
-        {
-            options.EnableSensitiveDataLogging();
-            options.UseSqlServer(Configuration.GetConnectionString("coneccaoDB"),
-                b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName));
-            options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-        });
+        services.ConfiguraçãoServices(Configuration);
 
-        //services.Configure<IdentityOptions>(options =>
-        //{
-        //    // Default Password settings.
-        //    options.Password.RequireDigit = false;
-        //    options.Password.RequireLowercase = false;
-        //    options.Password.RequireNonAlphanumeric = false;
-        //    options.Password.RequireUppercase = false;
-        //    options.Password.RequiredLength = 3;
-        //    options.Password.RequiredUniqueChars = 1;
-        //});
+      
+ 
 
         services.AddControllersWithViews();
         services.AddMemoryCache();
         services.AddSession();
 
         services.AddIdentity<IdentityUser, IdentityRole>()
+
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();
         services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
@@ -65,14 +53,11 @@ public class Startup
         });
 
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-        services.AddTransient<IPedidoRepository, PedidoRepository>();
-        services.AddTransient<ILanches, RepositoryLanche>();
-        services.AddTransient<ILancheServices, LancheService>();
-        services.AddTransient<ICategoria, RepositoryCategoria>();
-        services.AddTransient<ICategoryServices, CategoryService>();
+     
+      
 
-        services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));// carrinho instaciado e iniciado na sessao
-        services.AddAutoMapper(typeof(DomainTOMappingProfile));
+   
+
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

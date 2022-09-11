@@ -1,0 +1,96 @@
+﻿@model CategoriaDTO
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+    <div class="modal-content ">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel2">
+                <i class="fa fa-print mr-2px"></i>
+                TEla de edição
+            </h5>
+
+
+        </div>
+
+        <div class="modal-body">
+
+
+
+            <div class="card h-100">
+                <div class="card-header">
+                    <span class="card-title text-125">
+                        Editar lanche
+                    </span>
+                </div>
+
+                <div class="card-body" style="height:100%;">
+
+
+
+
+
+                    <h1>Edit</h1>
+
+                    <h4>Categoria</h4>
+                    <hr />
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <form asp-action="Edit">
+                                @*   <div asp-validation-summary=All class="text-danger"></div>*@
+                                <input type="hidden" asp-for="CategoriaId" />
+                                <div class="form-group">
+                                    <label asp-for="CategoryName" class="control-label"></label>
+                                    <input asp-for="CategoryName" class="form-control" />
+                                    <span asp-validation-for="CategoryName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Descricao" class="control-label"></label>
+                                    <input asp-for="Descricao" class="form-control" />
+                                    <span asp-validation-for="Descricao" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Save" class="btn btn-primary" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a asp-action="Index">Back to List</a>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">
+                Cancelar
+            </button>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -551,3 +551,5 @@ C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.pdb
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.genruntimeconfig.cache
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\ref\LancheMVC.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\LancheMV_InfraIOC.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\LancheMV_InfraIOC.pdb

@@ -7,9 +7,9 @@
 <h1>Categorias</h1>
 
 <p>
-    <a asp-action="Create">Criar Nova Categoria</a>
+    <a  id="CriarCAtegory" class="btn btn-info">Criar Nova Categoria</a>
 </p>
-<table class="table">
+<table class="table" id="TAbleSCategory">
     <thead>
         <tr>
             <th>
@@ -32,11 +32,129 @@
                     @Html.DisplayFor(modelItem => item.Descricao)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.CategoriaId">Editar</a> |
+                    <a  class="EditBottao" data-id="@item.CategoriaId" >Editar</a> |
                     <a asp-action="Details" asp-route-id="@item.CategoriaId">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.CategoriaId">Deletar</a>
+                    <a asp-action="Delete" class="deletar" asp-route-id="@item.CategoriaId">Deletar</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<div class="modal fade " id="modalGeneric" role="dialog" ">
+</div>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#TAbleSCategory').DataTable();
+
+        $('#CriarCAtegory').on('click', function (e) {
+
+
+            var url = '@Url.Action("Create", "AdminCategorias" )'
+
+
+            $.ajax({
+                url: url,
+                type: "GET",
+                dataType: "html",
+                success: function (data) {
+                    console.log(data);
+                    $('#modalGeneric').html(data);
+                    $('#modalGeneric').modal('show');
+                }
+            });//final do ajax
+
+        });// final do click jquery
+
+
+
+
+        $('.deletar').on('click', function () {
+
+            var gf = $(this).closest('td').find('a[data-link]').data('link');
+         
+            console.log("tests " + gf)
+            Swal.fire({
+                title: 'Salvar a Demanda?',
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: 'Salvar',
+                denyButtonText: `Nao salvar`,
+            }).then((result) => {
+
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    Swal.fire('Saved!', '', 'success')
+
+                    $.post(gf, function (response) {
+                        alert("success");
+
+                    });
+
+
+                    window.location.href = $('#danger-alert').attr("data-link");
+                    console.log('Eviado')
+                }
+
+
+
+
+            })
+        })
+
+
+
+
+
+    });// final do documen REady
+
+
+
+    var urlf = "@Url.Action("_Edit", "AdminLanches",   new { id = 134  })"
+  
+
+    $(function () {
+
+        $('.EditBottao').on('click', function (e) {
+
+
+            var idk = $(this).closest('td').find('a[data-id]').data('id');
+         
+            var url = '@Url.Action("_Edit", "AdminCategorias" )' + '?id=' + idk
+
+
+            $.ajax({
+                url: url,
+                type: "GET",
+                dataType: "html",
+                success: function (data) {
+                    console.log(data);
+                    $('#modalGeneric').html(data);
+                    $('#modalGeneric').modal('show');
+                }
+            })
+
+
+        })
+
+
+
+
+
+
+
+    })
+
+
+
+
+
+
+</script>
+
+
+

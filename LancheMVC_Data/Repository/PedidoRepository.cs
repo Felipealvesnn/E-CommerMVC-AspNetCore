@@ -2,6 +2,7 @@
 using LancheMVC_Data.Contexto;
 using LancheMVC_Domain;
 using LancheMVC_Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace LancheMVC_Data.Repository
 {
@@ -15,6 +16,18 @@ namespace LancheMVC_Data.Repository
         {
             _appDbContext = appDbContext;
             _carrinhoCompra = carrinhoCompra;
+        }
+
+        public void Adicionar(Pedido pedido)
+        {
+            _appDbContext.Pedidos.Add(pedido);
+             _appDbContext.SaveChanges();
+        }
+
+        public void Atualizar(Pedido pedido)
+        {
+            _appDbContext.Update(pedido);
+            _appDbContext.SaveChanges();
         }
 
         public void CriarPedido(Pedido pedido)
@@ -38,5 +51,30 @@ namespace LancheMVC_Data.Repository
             }
             _appDbContext.SaveChanges();
         }
+
+        public Pedido PegaPorId(int? id)
+        {
+            var pedido = _appDbContext.Pedidos.Find(id);
+            return pedido;
+        }
+
+        public void Remover(Pedido pedido)
+        {
+          
+            _appDbContext.Pedidos.Remove(pedido);
+            _appDbContext.SaveChanges();
+        }
+
+        public IEnumerable<Pedido> ReTornaTodos()
+        {
+            return _appDbContext.Pedidos.ToList();
+        }
+        public Boolean PedidoExiste(int? id)
+        {
+
+            return _appDbContext.Pedidos.Any(e => e.PedidoId == id);
+        }
+
+        
     }
 }
