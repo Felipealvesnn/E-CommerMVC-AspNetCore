@@ -7,7 +7,7 @@ namespace LancheMVC_Data.Repository
 {
     public class RepositoryLanche : ILanches
     {
-        public readonly AppDbContext _Ctx;
+        public readonly  AppDbContext _Ctx;
 
         public RepositoryLanche(AppDbContext ctx)
         {
@@ -16,7 +16,10 @@ namespace LancheMVC_Data.Repository
 
         public Lanche PegaLanchePorId(int? testes)
         {
-            return _Ctx.Lanches.Include(c => c.Categoria).SingleOrDefault(p => p.LancheId == testes);
+          var testesss =  _Ctx.Lanches.Include(c => c.Categoria).SingleOrDefault(p => p.LancheId == testes);
+            _Ctx.Entry(testesss).State = EntityState.Detached;
+            return testesss;
+
             //return _Ctx.Lanches.Find(id);
         }
 
@@ -32,7 +35,7 @@ namespace LancheMVC_Data.Repository
 
         public IEnumerable<Lanche> RetornaLancheComCategoria()
         {
-            return _Ctx.Lanches.Include(l => l.Categoria).ToList();
+            return _Ctx.Lanches.Include(l => l.Categoria).AsQueryable();
         }
 
         public void Adicionar(Lanche lanche)

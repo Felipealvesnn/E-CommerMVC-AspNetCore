@@ -1,14 +1,7 @@
 ﻿using LancheMV_InfraIOC;
-using LancheMVC_Aplication.Interfaces;
-using LancheMVC_Aplication.Maps;
-using LancheMVC_Aplication.Serviços;
 using LancheMVC_Data.Contexto;
-using LancheMVC_Data.Identity;
-using LancheMVC_Data.Repository;
 using LancheMVC_Domain.ContasInterfaces;
-using LancheMVC_Domain.Interfaces;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 
 namespace LancheMVC;
 
@@ -31,18 +24,14 @@ public class Startup
 
         services.ConfiguraçãoServices(Configuration);
 
-      
- 
-
-        services.AddControllersWithViews();
-        services.AddMemoryCache();
-        services.AddSession();
+       
 
         services.AddIdentity<IdentityUser, IdentityRole>()
 
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();
-        services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
+
+     
         services.AddAuthorization(options =>
         {
             options.AddPolicy("Admin",

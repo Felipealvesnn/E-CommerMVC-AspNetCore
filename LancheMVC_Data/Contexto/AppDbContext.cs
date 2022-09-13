@@ -1,7 +1,9 @@
-﻿using LancheMVC_Domain;
+﻿using LancheMVC_Data.Contexto;
+using LancheMVC_Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+
 
 namespace LancheMVC_Data.Contexto
 {

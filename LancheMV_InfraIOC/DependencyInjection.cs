@@ -7,10 +7,11 @@ using LancheMVC_Data.Identity;
 using LancheMVC_Data.Repository;
 using LancheMVC_Domain.ContasInterfaces;
 using LancheMVC_Domain.Interfaces;
-using Microsoft.AspNetCore.Identity;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ReflectionIT.Mvc.Paging;
 
 namespace LancheMV_InfraIOC
 {
@@ -41,17 +42,25 @@ namespace LancheMV_InfraIOC
 
            
             services.AddMemoryCache();
-           
 
-      
-        
+
+            services.AddControllersWithViews();
+            services.AddMemoryCache();
+            services.AddSession();
+
             services.AddScoped<ILanches, RepositoryLanche>();
             services.AddScoped<ILancheServices, LancheService>();
             services.AddScoped<ICategoria, RepositoryCategoria>();
             services.AddScoped<ICategoryServices, CategoryService>();
-            services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));// carrinho instaciado e iniciado na sessao
+            services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
             services.AddScoped<IPedidoRepository, PedidoRepository>();
 
+            services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));// carrinho instaciado e iniciado na sessao
+
+            services.AddPaging(options => {
+                options.ViewName = "Bootstrap4";
+                options.PageParameterName = "pageindex";
+            });
 
             services.AddAutoMapper(typeof(DomainTOMappingProfile));
 

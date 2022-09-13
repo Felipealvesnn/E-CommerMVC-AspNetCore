@@ -8,7 +8,8 @@ namespace LancheMVC
 {
     public class CarrinhoCompra
     {
-        private readonly AppDbContext _context;
+       
+       private readonly AppDbContext _context;
 
         public CarrinhoCompra(AppDbContext context)
         {
@@ -17,8 +18,8 @@ namespace LancheMVC
 
         public string CarrinhoCompraId { get; set; }
         public List<CarrinhoCompraItem> CarrinhoCompraItems { get; set; }
-
-        public static CarrinhoCompra GetCarrinho(IServiceProvider services)
+         
+    public static CarrinhoCompra GetCarrinho(IServiceProvider services)
         {
             //define uma sessão
             ISession session =
@@ -51,12 +52,14 @@ namespace LancheMVC
                 carrinhoCompraItem = new CarrinhoCompraItem
                 {
                     CarrinhoCompraId = CarrinhoCompraId,
-                    Lanche = lanche,
+                  //  Lanche = lanche,
                     Quantidade = 1
                 };
-
+               
+                
                 try
                 {
+                   
                     _context.CarrinhoCompraItem.Add(carrinhoCompraItem);
                 }
                 catch (Exception ex)
@@ -68,14 +71,13 @@ namespace LancheMVC
             {
                 carrinhoCompraItem.Quantidade++;
             }
-            try
-            {
+            
                 _context.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
+            
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex);
+            //}
         }
 
         public int RemoverDoCarrinho(Lanche lanche)
