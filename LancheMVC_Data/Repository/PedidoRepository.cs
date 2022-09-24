@@ -65,9 +65,9 @@ namespace LancheMVC_Data.Repository
             _appDbContext.SaveChanges();
         }
 
-        public IEnumerable<Pedido> ReTornaTodos()
+        public IQueryable<Pedido> ReTornaTodos()
         {
-            return _appDbContext.Pedidos.ToList();
+            return _appDbContext.Pedidos.AsNoTracking().AsQueryable();
         }
         public Boolean PedidoExiste(int? id)
         {

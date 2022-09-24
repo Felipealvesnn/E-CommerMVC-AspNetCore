@@ -62,6 +62,15 @@ namespace LancheMV_InfraIOC
                 options.PageParameterName = "pageindex";
             });
 
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("Admin",
+                    politica =>
+                    {
+                        politica.RequireRole("Admin");
+                    });
+            });
+
             services.AddAutoMapper(typeof(DomainTOMappingProfile));
 
             return services;

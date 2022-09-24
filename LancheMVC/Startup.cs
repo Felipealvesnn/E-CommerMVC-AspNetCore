@@ -32,14 +32,7 @@ public class Startup
             .AddDefaultTokenProviders();
 
      
-        services.AddAuthorization(options =>
-        {
-            options.AddPolicy("Admin",
-                politica =>
-                {
-                    politica.RequireRole("Admin");
-                });
-        });
+   
 
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
      

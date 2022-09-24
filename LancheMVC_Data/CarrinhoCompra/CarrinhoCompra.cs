@@ -52,7 +52,7 @@ namespace LancheMVC
                 carrinhoCompraItem = new CarrinhoCompraItem
                 {
                     CarrinhoCompraId = CarrinhoCompraId,
-                  //  Lanche = lanche,
+                    Lanche = lanche,
                     Quantidade = 1
                 };
                

@@ -3,6 +3,7 @@ using LancheMVC_Domain.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ReflectionIT.Mvc.Paging;
 
 namespace LancheMVC.Areas.Admin.Controllers
 {
@@ -17,11 +18,27 @@ namespace LancheMVC.Areas.Admin.Controllers
             _pedidoRepository = pedidoRepository;
         }
 
-        public IActionResult Index()
+        //public IActionResult Index()
+        //{
+        //    var variavel = _pedidoRepository.ReTornaTodos();
+        //    return View(variavel);
+        //}
+
+        public async Task<IActionResult> Index(string filter, int pageindex = 1, string sort = "Nome")
         {
-            var variavel = _pedidoRepository.ReTornaTodos();
-            return View(variavel);
+            var resultado = _pedidoRepository.ReTornaTodos();
+
+            if (!string.IsNullOrWhiteSpace(filter))
+            {
+                resultado = resultado.Where(p => p.Nome.Contains(filter));
+            }
+
+            var model = await PagingList.CreateAsync(resultado, 3, pageindex, sort, "Nome");
+            model.RouteValue = new RouteValueDictionary { { "filter", filter } };
+
+            return View(model);
         }
+
 
         public IActionResult Create([Bind("PedidoId,Nome,Sobrenome,Endereco1,Endereco2,Cep,Estado,Cidade,Telefone,Email,PedidoEnviado,PedidoEntregueEm")] Pedido pedido)
         {

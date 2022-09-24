@@ -35,7 +35,7 @@ namespace LancheMVC_Data.Repository
 
         public IEnumerable<Lanche> RetornaLancheComCategoria()
         {
-            return _Ctx.Lanches.Include(l => l.Categoria).AsQueryable();
+            return _Ctx.Lanches.Include(l => l.Categoria).AsNoTracking().AsQueryable();
         }
 
         public void Adicionar(Lanche lanche)

@@ -8,7 +8,7 @@ namespace LancheMVC_Domain.Interfaces
 {
     public interface IPedidoRepository
     {
-        IEnumerable<Pedido> ReTornaTodos();
+        IQueryable<Pedido> ReTornaTodos();
         void Adicionar(Pedido pedido);
         Pedido PegaPorId(int? id);
         void Atualizar(Pedido pedido);
