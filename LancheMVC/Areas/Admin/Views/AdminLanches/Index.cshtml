@@ -1,10 +1,26 @@
-﻿@model IEnumerable<LancheDTO>
-
+﻿@model ReflectionIT.Mvc.Paging.PagingList<LancheDTO>
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
+
+
+<form method="get" class="form-inline">
+
+    <input name="filter" class="form-control" placeholder="filtro"
+           value="@Model.RouteValue["Filter"]" />
+
+    <button type="submit" class="btn btn-info">Procurar</button>
+</form>
+
+Total de Pedidos : @Model.TotalRecordCount
+<div>
+    <vc:pager paging-list="@Model"></vc:pager>
+</div>
+
+
+
 
 <p>
     <a href="#" id="CriarLanche">criar novo lanche </a>

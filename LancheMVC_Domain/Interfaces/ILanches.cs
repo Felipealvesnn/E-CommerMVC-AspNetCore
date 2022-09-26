@@ -8,10 +8,10 @@ namespace LancheMVC_Domain.Interfaces
 {
     public interface ILanches
     {
-        IEnumerable<Lanche> RetornaLanchePreferido ();
+        IQueryable<Lanche> RetornaLanchePreferido ();
         Lanche PegaLanchePorId(int? id);
-        IEnumerable<Lanche> RetornaLancheComCategoria();
-        IEnumerable<Lanche> RetornaLanchePorNome(string t);
+        IQueryable<Lanche> RetornaLancheComCategoria();
+        IQueryable<Lanche> RetornaLanchePorNome(string t);
         void  Adicionar(Lanche lanche);
         void  Atualizar(Lanche lanche);
         void  Remover(Lanche lanche);

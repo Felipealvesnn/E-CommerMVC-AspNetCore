@@ -10,10 +10,10 @@ namespace LancheMVC_Aplication.Interfaces
 {
     public interface ILancheServices
     {
-        IEnumerable<LancheDTO> RetornaTodos();
+        IQueryable<LancheDTO> RetornaTodos();
         LancheDTO PegarPorId(int? id);
-        IEnumerable<LancheDTO> RetornaLanchePreferido();
-        IEnumerable<LancheDTO> RetornaLanchePorNome(string t);
+        IQueryable<LancheDTO> RetornaLanchePreferido();
+        IQueryable<LancheDTO> RetornaLanchePorNome(string t);
         void Add(LancheDTO productDTO);
         void Update(LancheDTO productDTO);
         void Delete(int? id);

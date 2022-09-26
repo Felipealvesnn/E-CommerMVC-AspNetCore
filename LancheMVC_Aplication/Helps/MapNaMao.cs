@@ -48,7 +48,7 @@ namespace LancheMVC
         }
 
         
-            public static IEnumerable<LancheDTO> TOLancheDTOEnumerable(this IEnumerable<Lanche> model)
+            public static IQueryable<LancheDTO> TOLancheDTOEnumerable(this IQueryable<Lanche> model)
             {
 
                 return model.Select(p => new LancheDTO()

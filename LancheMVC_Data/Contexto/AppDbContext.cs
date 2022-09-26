@@ -27,6 +27,10 @@ namespace LancheMVC_Data.Contexto
          
         }
 
-        
+        //public override int SaveChanges()
+        //{
+        //    return base.SaveChanges();
+        //}
+
     }
 }

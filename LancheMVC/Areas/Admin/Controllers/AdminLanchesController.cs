@@ -1,9 +1,11 @@
 ﻿using LancheMVC_Aplication.DTOs;
 using LancheMVC_Aplication.Interfaces;
+using LancheMVC_Data.Repository;
 using LancheMVC_Domain.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using ReflectionIT.Mvc.Paging;
 
 namespace LancheMVC.Areas.Admin.Controllers
 {
@@ -22,12 +24,28 @@ namespace LancheMVC.Areas.Admin.Controllers
             _Category = category;
         }
 
-        public IActionResult Index()
+        //public IActionResult Index()
+        //{
+        //    var todeslanches = _lanches.RetornaTodos();
+        //    var ordenados = todeslanches.OrderBy(d => d.Id);
+        //    return View(ordenados);
+        //}
+        public async Task<IActionResult> Index(string filter, int pageindex = 1, string sort = "Nome")
         {
-            var todeslanches = _lanches.RetornaTodos();
-            var ordenados = todeslanches.OrderBy(d => d.Id);
-            return View(ordenados);
+            var resultado = _lanches.RetornaTodos();
+
+            if (!string.IsNullOrWhiteSpace(filter))
+            {
+                resultado = resultado.Where(p => p.Nome.Contains(filter));
+            }
+
+            var model = await PagingList.CreateAsync(resultado, 3, pageindex, sort, "Nome");
+            model.RouteValue = new RouteValueDictionary { { "filter", filter } };
+
+            return View(model);
         }
+
+
 
         public IActionResult Create()
         {

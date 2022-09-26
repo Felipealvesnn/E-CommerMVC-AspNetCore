@@ -1,4 +1,5 @@
-﻿using LancheMVC_Domain;
+﻿using LancheMVC_Aplication.Interfaces;
+using LancheMVC_Domain;
 using LancheMVC_Domain.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,11 +10,13 @@ namespace LancheMVC.Controllers
     {
         private readonly IPedidoRepository _pedidoRepository;
         private readonly CarrinhoCompra _carrinhoCompra;
+        private readonly ILancheServices _lanches;
 
-        public PedidoController(IPedidoRepository pedidoRepository, CarrinhoCompra carrinhoCompra)
+        public PedidoController(IPedidoRepository pedidoRepository, CarrinhoCompra carrinhoCompra, ILancheServices lanches)
         {
             _pedidoRepository = pedidoRepository;
             _carrinhoCompra = carrinhoCompra;
+            _lanches = lanches;
         }
 
         [Authorize]
@@ -55,7 +58,10 @@ namespace LancheMVC.Controllers
             if (ModelState.IsValid)
             {
                 //cria o pedido e os detalhes
-                _pedidoRepository.Adicionar(pedido);
+                _pedidoRepository.CriarPedido(pedido);
+
+                    
+
 
                 //define mensagens ao cliente
                 ViewBag.CheckoutCompletoMensagem = "Obrigado pelo seu pedido :)";

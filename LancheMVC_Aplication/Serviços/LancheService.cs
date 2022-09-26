@@ -27,19 +27,19 @@ namespace LancheMVC_Aplication.Serviços
 
         }
 
-        public IEnumerable<LancheDTO> RetornaLanchePreferido()
+        public IQueryable<LancheDTO> RetornaLanchePreferido()
         {
             var lanchepreferido = _lanche.RetornaLanchePreferido();
             return lanchepreferido.TOLancheDTOEnumerable();
         }
-        public IEnumerable<LancheDTO> RetornaLanchePorNome(string t)
+        public IQueryable<LancheDTO> RetornaLanchePorNome(string t)
         {
             var lanchepreferido = _lanche.RetornaLanchePorNome(t);
 
             return lanchepreferido.TOLancheDTOEnumerable();
         }
 
-        public IEnumerable<LancheDTO> RetornaTodos()
+        public IQueryable<LancheDTO> RetornaTodos()
         {
             var categoriesEntity =  _lanche.RetornaLancheComCategoria();
             return categoriesEntity.TOLancheDTOEnumerable();

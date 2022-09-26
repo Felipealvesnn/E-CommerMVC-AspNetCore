@@ -1,5 +1,6 @@
 ﻿using LancheMVC_Data.Contexto;
 using LancheMVC_Domain;
+using LancheMVC_Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,8 +9,8 @@ namespace LancheMVC
 {
     public class CarrinhoCompra
     {
-       
-       private readonly AppDbContext _context;
+
+        private readonly AppDbContext _context;
 
         public CarrinhoCompra(AppDbContext context)
         {
@@ -18,8 +19,8 @@ namespace LancheMVC
 
         public string CarrinhoCompraId { get; set; }
         public List<CarrinhoCompraItem> CarrinhoCompraItems { get; set; }
-         
-    public static CarrinhoCompra GetCarrinho(IServiceProvider services)
+
+        public static CarrinhoCompra GetCarrinho(IServiceProvider services)
         {
             //define uma sessão
             ISession session =
@@ -40,26 +41,27 @@ namespace LancheMVC
                 CarrinhoCompraId = carrinhoId
             };
         }
+        private bool CarrinhoCompraItemExiste(int lancheId) => _context.CarrinhoCompraItem.Any(
+                     s => s.Lanche.LancheId == lancheId &&
+                     s.CarrinhoCompraId == CarrinhoCompraId);
 
         public void AdicionarAoCarrinho(Lanche lanche)
         {
-            var carrinhoCompraItem = _context.CarrinhoCompraItem.SingleOrDefault(
-                     s => s.Lanche.LancheId == lanche.LancheId &&
-                     s.CarrinhoCompraId == CarrinhoCompraId);
+            CarrinhoCompraItem carrinhoCompraItem = null;
 
-            if (carrinhoCompraItem == null)
+            if (!CarrinhoCompraItemExiste(lanche.LancheId))
             {
                 carrinhoCompraItem = new CarrinhoCompraItem
                 {
                     CarrinhoCompraId = CarrinhoCompraId,
-                    Lanche = lanche,
+                    LancheId = lanche.LancheId,
+                   
                     Quantidade = 1
                 };
-               
-                
+
                 try
                 {
-                   
+
                     _context.CarrinhoCompraItem.Add(carrinhoCompraItem);
                 }
                 catch (Exception ex)
@@ -68,12 +70,18 @@ namespace LancheMVC
                 }
             }
             else
+
             {
+                carrinhoCompraItem = _context.CarrinhoCompraItem.FirstOrDefault(
+                     s => s.Lanche.LancheId == lanche.LancheId &&
+                     s.CarrinhoCompraId == CarrinhoCompraId);
                 carrinhoCompraItem.Quantidade++;
+                _context.Entry(carrinhoCompraItem).State = EntityState.Modified;
             }
-            
-                _context.SaveChanges();
-            
+            _context.SaveChanges();
+
+
+
             //catch (Exception ex)
             //{
             //    Console.WriteLine(ex);
@@ -117,7 +125,7 @@ namespace LancheMVC
         {
             var carrinhoItens = _context.CarrinhoCompraItem
                                  .Where(carrinho => carrinho.CarrinhoCompraId == CarrinhoCompraId);
-
+           
             _context.CarrinhoCompraItem.RemoveRange(carrinhoItens);
             _context.SaveChanges();
         }

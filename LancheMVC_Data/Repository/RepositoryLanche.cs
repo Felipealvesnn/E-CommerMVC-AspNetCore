@@ -16,24 +16,24 @@ namespace LancheMVC_Data.Repository
 
         public Lanche PegaLanchePorId(int? testes)
         {
-          var testesss =  _Ctx.Lanches.Include(c => c.Categoria).SingleOrDefault(p => p.LancheId == testes);
+          var testesss =  _Ctx.Lanches.AsNoTracking().Include(c => c.Categoria).SingleOrDefault(p => p.LancheId == testes);
             _Ctx.Entry(testesss).State = EntityState.Detached;
             return testesss;
 
             //return _Ctx.Lanches.Find(id);
         }
 
-        public IEnumerable<Lanche> RetornaLanchePreferido()
+        public IQueryable<Lanche> RetornaLanchePreferido()
         {
             return _Ctx.Lanches.Where(l => l.IsLanchePreferido).Include(l => l.Categoria);
         }
 
-        public IEnumerable<Lanche> RetornaLanchePorNome(string t)
+        public IQueryable<Lanche> RetornaLanchePorNome(string t)
         {
             return _Ctx.Lanches.Where(p => p.Nome.ToLower().Contains(t.ToLower()));
         }
 
-        public IEnumerable<Lanche> RetornaLancheComCategoria()
+        public IQueryable<Lanche> RetornaLancheComCategoria()
         {
             return _Ctx.Lanches.Include(l => l.Categoria).AsNoTracking().AsQueryable();
         }

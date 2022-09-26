@@ -12,6 +12,8 @@ namespace LancheMVC_Domain
 
         [StringLength(200)]
         public string CarrinhoCompraId { get; set; }
-        public Lanche Lanche { get; set; }
+
+        public int LancheId { get; set; }
+        public virtual Lanche Lanche { get; set; }
     }
 }

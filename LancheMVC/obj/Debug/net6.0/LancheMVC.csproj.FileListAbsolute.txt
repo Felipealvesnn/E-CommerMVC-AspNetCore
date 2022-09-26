@@ -536,7 +536,6 @@ C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.AssemblyInfoInputs.cache
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.AssemblyInfo.cs
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.csproj.CoreCompileInputs.cache
-C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.RazorAssemblyInfo.cache
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.RazorAssemblyInfo.cs
@@ -845,3 +844,4 @@ C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\bin\Debug\net6.0\ReflectionIT.Mvc.Paging.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\obj\Debug\net6.0\LancheMVC.MvcApplicationPartsAssemblyInfo.cs

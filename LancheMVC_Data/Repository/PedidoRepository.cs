@@ -45,11 +45,23 @@ namespace LancheMVC_Data.Repository
                     Quantidade = item.Quantidade,
                     LancheId = item.Lanche.LancheId,
                     PedidoId = pedido.PedidoId,
-                    Preco = item.Lanche.Preco
+                    Preco = item.Lanche.Preco,
+                    Nome = item.Lanche.Nome,
+                    ImagemUrl= item.Lanche.ImagemUrl,
+
                 };
                 _appDbContext.PedidoDetalhes.Add(pedidoDetail);
             }
-            _appDbContext.SaveChanges();
+            try
+            {
+
+                _appDbContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
         }
 
         public Pedido PegaPorId(int? id)
