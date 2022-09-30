@@ -66,7 +66,7 @@ namespace LancheMVC_Data.Repository
 
         public Pedido PegaPorId(int? id)
         {
-            var pedido = _appDbContext.Pedidos.Find(id);
+            var pedido = _appDbContext.Pedidos.Include(d=>d.PedidoItens).ThenInclude(d=>d.Lanche).FirstOrDefault(d=>d.PedidoId==id);
             return pedido;
         }
 

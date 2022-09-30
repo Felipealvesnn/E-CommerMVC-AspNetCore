@@ -1,4 +1,5 @@
-﻿using LancheMVC_Domain;
+﻿using LancheMVC.ViewsModel;
+using LancheMVC_Domain;
 using LancheMVC_Domain.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -38,6 +39,25 @@ namespace LancheMVC.Areas.Admin.Controllers
 
             return View(model);
         }
+
+        public IActionResult PedidoLanches(int? id)
+        {
+            var pedido = _pedidoRepository.PegaPorId(id);
+
+            if (pedido == null)
+            {
+                Response.StatusCode = 404;
+                return View("PedidoNotFound", id.Value);
+            }
+
+            PedidosVM pedidoLanches = new PedidosVM()
+            {
+                Pedido = pedido,
+                PedidoDetalhes = pedido.PedidoItens
+            };
+            return View(pedidoLanches);
+        }
+
 
 
         public IActionResult Create([Bind("PedidoId,Nome,Sobrenome,Endereco1,Endereco2,Cep,Estado,Cidade,Telefone,Email,PedidoEnviado,PedidoEntregueEm")] Pedido pedido)
