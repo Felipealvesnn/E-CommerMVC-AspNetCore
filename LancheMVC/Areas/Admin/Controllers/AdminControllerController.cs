@@ -5,7 +5,7 @@ namespace LancheMVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize("Admin")]
-    public class AdminController : Controller
+    public class AdminControllerController : Controller
     {
         public IActionResult Index()
         {

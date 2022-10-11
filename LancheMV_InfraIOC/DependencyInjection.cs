@@ -2,6 +2,7 @@
 using LancheMVC_Aplication.Interfaces;
 using LancheMVC_Aplication.Maps;
 using LancheMVC_Aplication.Serviços;
+using LancheMVC_Data;
 using LancheMVC_Data.Contexto;
 using LancheMVC_Data.Identity;
 using LancheMVC_Data.Repository;
@@ -54,6 +55,8 @@ namespace LancheMV_InfraIOC
             services.AddScoped<ICategoryServices, CategoryService>();
             services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
             services.AddScoped<IPedidoRepository, PedidoRepository>();
+            services.AddScoped<RelatorioVendaService>();
+
 
             services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));// carrinho instaciado e iniciado na sessao
 

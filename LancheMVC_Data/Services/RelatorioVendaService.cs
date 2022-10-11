@@ -2,7 +2,7 @@
 using LancheMVC_Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace LancheMVC.Areas.Admin.Services
+namespace LancheMVC_Data
 {
     public class RelatorioVendaService
     {
@@ -12,7 +12,7 @@ namespace LancheMVC.Areas.Admin.Services
         {
             context = _context;
         }
-        public async Task<List<Pedido>> FindByDateAsync(DateTime? minDate, DateTime? maxDate)
+        public async Task<List<Pedido>> ProcuraDAtaASYNC(DateTime? minDate, DateTime? maxDate)
         {
             var resultado = from obj in context.Pedidos select obj;
 
