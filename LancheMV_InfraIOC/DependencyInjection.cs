@@ -56,6 +56,7 @@ namespace LancheMV_InfraIOC
             services.AddScoped<ICategoryServices, CategoryService>();
             services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
             services.AddScoped<IPedidoRepository, PedidoRepository>();
+
             services.AddScoped<RelatorioVendaService>();
 
             services.Configure<ConfigurationImagens>(configuration.GetSection("ConfigurationsPastaImagens"));
