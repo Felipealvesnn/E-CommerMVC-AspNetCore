@@ -1,4 +1,5 @@
-﻿using LancheMVC_Domain;
+﻿using LancheMVC_Aplication.DTOs;
+using LancheMVC_Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -69,5 +70,39 @@ namespace LancheMVC.Areas.Admin.Controllers
             //retorna a viewdata
             return View(ViewData);
         }
+
+        public IActionResult GetImagens()
+        {
+            FileManagerModel model = new FileManagerModel();
+
+            var userImagesPath = Path.Combine(_webHostEnvironment.WebRootPath,
+                 _myConfigs.NomePastaImagensProdutos);
+
+            DirectoryInfo dir = new DirectoryInfo(userImagesPath);
+            FileInfo[] files = dir.GetFiles();
+            model.CaminhoDaImagemProduto = _myConfigs.NomePastaImagensProdutos;
+
+            if (files.Length == 0)
+            {
+                ViewData["Erro"] = $"Nenhum arquivo encontrado na pasta {userImagesPath}";
+            }
+
+            model.Files = files;
+            return View(model);
+        }
+        public IActionResult Deletefile(string fname)
+        {
+            string _imagemDeleta = Path.Combine(_webHostEnvironment.WebRootPath,
+                _myConfigs.NomePastaImagensProdutos + "\\", fname);
+
+            if ((System.IO.File.Exists(_imagemDeleta)))
+            {
+                System.IO.File.Delete(_imagemDeleta);
+                ViewData["Deletado"] = $"Arquivo(s) {_imagemDeleta} deletado com sucesso";
+            }
+            return View("index");
+        }
+
+
     }
 }
