@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LancheMVC_Data\LancheMVC_Data.csproj" />
     <ProjectReference Include="..\LancheMV_InfraIOC\LancheMV_InfraIOC.csproj" />
   </ItemGroup>
 

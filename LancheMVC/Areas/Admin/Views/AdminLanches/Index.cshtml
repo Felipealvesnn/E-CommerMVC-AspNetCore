@@ -23,7 +23,7 @@ Total de Pedidos : @Model.TotalRecordCount
 
 
 <p>
-    <a href="#" id="CriarLanche">criar novo lanche </a>
+    <a class="btn btn-success" href="#" id="CriarLanche">criar novo lanche </a>
 </p>
 <table class="table  table-hover" id="TAbleSLanche">
     <thead class="thead-dark">
@@ -112,10 +112,9 @@ Total de Pedidos : @Model.TotalRecordCount
 
 
 <script>
+    $('#TAbleSLanche').DataTable();
 
-    $(document).ready(function () {
-
-        $('#TAbleSLanche').DataTable();
+    $(function () {    
 
         $('#CriarLanche').on('click', function (e) {
         
@@ -134,12 +133,13 @@ Total de Pedidos : @Model.TotalRecordCount
                 }
                 });//final do ajax
 
-             });// final do click jquery
+          });// final do click jquery
 
+     })
 
+    $(function () {
 
-
-        $('.deletar').on('click', function () {
+        $('.deletar').on('click', function (e) {
 
             var gf = $(this).closest('td').find('a[data-link]').data('link');
             console.log("tests " + gf )
@@ -169,13 +169,14 @@ Total de Pedidos : @Model.TotalRecordCount
 
 
             })
-            })
+
+         })
 
 
+       })
 
 
-
-    });// final do documen REady
+    
    
 
 

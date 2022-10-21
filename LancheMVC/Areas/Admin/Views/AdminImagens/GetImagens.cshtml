@@ -13,7 +13,8 @@
             <div class="column">
                 <img src="~/@caminho/@file.Name" width="125" height="125" title="@file.Name" asp-append-version="true">
                 <div style="padding:10px;text-align:left">
-                    <a class="btn btn-danger" href="@Url.Action("Deletefile","AdminImagens",new { fname=file.Name})">Deletar</a>
+                   @* <a class="btn btn-danger alinkeimg" href="@Url.Action("Deletefile","AdminImagens",new { fname=file.Name})">Deletar</a>*@
+                    <a class="btn btn-danger alinkeimg" data-nome="@file.Name">Deletar</a>
                 </div>
             </div>
         }
@@ -30,5 +31,21 @@
     <span>Para ver o nome do arquivo passa o mouse na imagem</span>
 </div>
 <div class="form-group">
-    <a class="btn btn-outline-info" asp-controller="AdminImagens" asp-action="Index">Retornar</a>
+    <a class="btn btn-outline-info " asp-controller="AdminImagens" asp-action="Index">Retornar</a>
 </div>
+<script>
+
+    $(document).ready(function () {
+        $(".alinkeimg").click(function (ev) {
+        
+            var gf = $(this).closest('div').find('a[data-nome]').data('nome');
+
+            alert(gf)
+        });
+       
+
+    });
+
+
+</script>
+

@@ -11656,6 +11656,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Grpc.Core >= 2.46.5",
+      "LancheMVC_Data >= 1.0.0",
       "LancheMV_InfraIOC >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.8",
@@ -11665,19 +11666,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Rudrex\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Documents\\Felipe\\Github\\E-CommerMVC-AspNetCore\\LancheMVC\\LancheMVC.csproj",
+      "projectUniqueName": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC\\LancheMVC.csproj",
       "projectName": "LancheMVC",
-      "projectPath": "C:\\Users\\admin\\Documents\\Felipe\\Github\\E-CommerMVC-AspNetCore\\LancheMVC\\LancheMVC.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Documents\\Felipe\\Github\\E-CommerMVC-AspNetCore\\LancheMVC\\obj\\",
+      "projectPath": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC\\LancheMVC.csproj",
+      "packagesPath": "C:\\Users\\Rudrex\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rudrex\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11691,8 +11697,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\admin\\Documents\\Felipe\\Github\\E-CommerMVC-AspNetCore\\LancheMV_InfraIOC\\LancheMV_InfraIOC.csproj": {
-              "projectPath": "C:\\Users\\admin\\Documents\\Felipe\\Github\\E-CommerMVC-AspNetCore\\LancheMV_InfraIOC\\LancheMV_InfraIOC.csproj"
+            "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC_Data\\LancheMVC_Data.csproj": {
+              "projectPath": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC_Data\\LancheMVC_Data.csproj"
+            },
+            "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMV_InfraIOC\\LancheMV_InfraIOC.csproj": {
+              "projectPath": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMV_InfraIOC\\LancheMV_InfraIOC.csproj"
             }
           }
         }
@@ -11753,7 +11762,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   },
