@@ -1,12 +1,12 @@
 ﻿@model LancheDTO
-
 @{
-    ViewData["Title"] = "Criação de lanche";
+    ViewData["Title"] = "Create";
 }
 
 
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="//cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+
+@*<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>*@
 <link href="~/Content/FormDetails.css" rel="stylesheet" />
 
 <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
@@ -88,10 +88,10 @@
             </div>
             <div class="form-group">
                 <label asp-for="CategoriaId" class="control-label"></label>
-                  @*    @Html.DropDownList("CategoriaId", null, "Selecione o Tipo", htmlAttributes: new { @Id = "Categoria", @class = "form-control " })*@
+                    @*  @Html.DropDownList("CategoriaId", null, "Selecione o Tipo", htmlAttributes: new { @Id = "Categoria", @class = "form-control " })*@
                         <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"> </select>
-                                </div>
-            <div class="form-group">
+                             </div>
+            <div class="form-group pt-1">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>

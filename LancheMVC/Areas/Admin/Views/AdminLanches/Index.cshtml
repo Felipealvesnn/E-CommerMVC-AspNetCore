@@ -11,7 +11,7 @@
     <input name="filter" class="form-control" placeholder="filtro"
            value="@Model.RouteValue["Filter"]" />
 
-    <button type="submit" class="btn btn-info">Procurar</button>
+    <button type="submit" class="btn btn-info mt-1">Procurar</button>
 </form>
 
 Total de Pedidos : @Model.TotalRecordCount
@@ -131,9 +131,10 @@ Total de Pedidos : @Model.TotalRecordCount
                     $('#modalGeneric').html(data);
                     $('#modalGeneric').modal('show');
                 }
-                });//final do ajax
 
-          });// final do click jquery
+              });//final do ajax
+
+         });// final do click jquery
 
      })
 
@@ -144,7 +145,8 @@ Total de Pedidos : @Model.TotalRecordCount
             var gf = $(this).closest('td').find('a[data-link]').data('link');
             console.log("tests " + gf )
             Swal.fire({
-                title: 'Salvar a Demanda?',
+                title: 'Deletar o produto?',
+                icon: 'warning',
                 showDenyButton: true,
                 showCancelButton: true,
                 confirmButtonText: 'Salvar',
