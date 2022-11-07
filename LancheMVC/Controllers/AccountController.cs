@@ -17,7 +17,7 @@ namespace LancheMVC.Controllers
 
         public IActionResult Login(string url)
         {
-            return View(new LoginVM()
+            return View("LoginGentella", new LoginVM()
             {
                 ReturnURL = url
             });
@@ -45,7 +45,7 @@ namespace LancheMVC.Controllers
             }
 
             ModelState.AddModelError("", "Falha ao realizar o login!!");
-            return View(loginVM);
+            return View( loginVM);
         }
 
         public IActionResult Register()

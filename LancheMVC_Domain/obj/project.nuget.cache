@@ -4,5 +4,12 @@
   "success": true,
   "projectFilePath": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC_Domain\\LancheMVC_Domain.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC_Domain\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
