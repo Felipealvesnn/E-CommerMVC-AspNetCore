@@ -1,4 +1,4 @@
-﻿namespace LancheMVC.ViewsModel
+﻿namespace LancheMVC_Aplication.DTOs
 {
     public class LancheGraficos
     {
