@@ -1,12 +1,11 @@
-﻿using LancheMVC_Aplication.DTOs;
-using LancheMVC_Data.Contexto;
+﻿using LancheMVC_Data.Contexto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LancheMVC_Aplication.Serviços
+namespace LancheMVC.ViewsModel
 {
     public class GraficoVendasServices
     {

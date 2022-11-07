@@ -58,7 +58,6 @@ namespace LancheMV_InfraIOC
             services.AddScoped<IPedidoRepository, PedidoRepository>();
 
             services.AddScoped<RelatorioVendaService>();
-            services.AddScoped<GraficoVendasServices>();
 
             services.Configure<ConfigurationImagens>(configuration.GetSection("ConfigurationsPastaImagens"));
 

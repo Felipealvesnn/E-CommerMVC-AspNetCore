@@ -10,3 +10,15 @@ C:\Users\admin\Documents\Felipe\Github\E-CommerMVC-AspNetCore\LancheMVC_Domain\o
 C:\Users\admin\Documents\Felipe\Github\E-CommerMVC-AspNetCore\LancheMVC_Domain\obj\Debug\net6.0\refint\LancheMVC_Domain.dll
 C:\Users\admin\Documents\Felipe\Github\E-CommerMVC-AspNetCore\LancheMVC_Domain\obj\Debug\net6.0\LancheMVC_Domain.pdb
 C:\Users\admin\Documents\Felipe\Github\E-CommerMVC-AspNetCore\LancheMVC_Domain\obj\Debug\net6.0\ref\LancheMVC_Domain.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Domain\bin\Debug\net6.0\LancheMVC_Domain.deps.json
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Domain\bin\Debug\net6.0\LancheMVC_Domain.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Domain\bin\Debug\net6.0\LancheMVC_Domain.pdb
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Domain\obj\Debug\net6.0\LancheMVC_Domain.csproj.AssemblyReference.cache
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Domain\obj\Debug\net6.0\LancheMVC_Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Domain\obj\Debug\net6.0\LancheMVC_Domain.AssemblyInfoInputs.cache
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Domain\obj\Debug\net6.0\LancheMVC_Domain.AssemblyInfo.cs
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Domain\obj\Debug\net6.0\LancheMVC_Domain.csproj.CoreCompileInputs.cache
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Domain\obj\Debug\net6.0\LancheMVC_Domain.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Domain\obj\Debug\net6.0\refint\LancheMVC_Domain.dll
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Domain\obj\Debug\net6.0\LancheMVC_Domain.pdb
+C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC_Domain\obj\Debug\net6.0\ref\LancheMVC_Domain.dll
