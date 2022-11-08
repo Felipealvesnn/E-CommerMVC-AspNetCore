@@ -2472,19 +2472,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Rudrex\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Documents\\Felipe\\Github\\E-CommerMVC-AspNetCore\\LancheMVC_Data\\LancheMVC_Data.csproj",
+      "projectUniqueName": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC_Data\\LancheMVC_Data.csproj",
       "projectName": "LancheMVC_Data",
-      "projectPath": "C:\\Users\\admin\\Documents\\Felipe\\Github\\E-CommerMVC-AspNetCore\\LancheMVC_Data\\LancheMVC_Data.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Documents\\Felipe\\Github\\E-CommerMVC-AspNetCore\\LancheMVC_Data\\obj\\",
+      "projectPath": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC_Data\\LancheMVC_Data.csproj",
+      "packagesPath": "C:\\Users\\Rudrex\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC_Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rudrex\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2498,8 +2503,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\admin\\Documents\\Felipe\\Github\\E-CommerMVC-AspNetCore\\LancheMVC_Domain\\LancheMVC_Domain.csproj": {
-              "projectPath": "C:\\Users\\admin\\Documents\\Felipe\\Github\\E-CommerMVC-AspNetCore\\LancheMVC_Domain\\LancheMVC_Domain.csproj"
+            "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC_Domain\\LancheMVC_Domain.csproj": {
+              "projectPath": "C:\\Users\\Rudrex\\OneDrive\\Documentos\\GitHub\\LancheMVC\\LancheMVC_Domain\\LancheMVC_Domain.csproj"
             }
           }
         }
