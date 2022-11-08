@@ -50,7 +50,7 @@ namespace LancheMVC.Areas.Admin.Controllers
         public IActionResult Create()
         {
             ViewBag.CategoriaId = new SelectList(_Category.ReTornaTodos(), "CategoriaId", "CategoryName");
-            return PartialView();
+            return View();
         }
 
         [HttpPost]
@@ -97,14 +97,12 @@ namespace LancheMVC.Areas.Admin.Controllers
             ViewBag.CategoriaId = new SelectList(_Category.ReTornaTodos(), "CategoriaId", "CategoryName", lanche.CategoriaId);
             return View(lanche);
         }
-        [HttpPost]
-        [ActionName("Delete")]
+
+        [HttpPost(), ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
              _lanches.Delete(id);
-           // return RedirectToAction(nameof(Index));
-
-           return RedirectToAction("Index", " AdminLanches");
+            return RedirectToAction(nameof(Index));
         }
 
 
