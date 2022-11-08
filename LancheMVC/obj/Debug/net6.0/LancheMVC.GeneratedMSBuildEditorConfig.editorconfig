@@ -8,209 +8,209 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LancheMVC
 build_property.RootNamespace = LancheMVC
-build_property.ProjectDir = C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC\
+build_property.ProjectDir = C:\Users\admin\Documents\Felipe\Github\E-CommerMVC-AspNetCore\LancheMVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\Rudrex\OneDrive\Documentos\GitHub\LancheMVC\LancheMVC
+build_property.MSBuildProjectDirectory = C:\Users\admin\Documents\Felipe\Github\E-CommerMVC-AspNetCore\LancheMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminCategorias/Index.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminCategorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminCategorias/_Create.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminCategorias/_Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXF9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminCategorias/_Edit.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminCategorias/_Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXF9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminGrafico/Index.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminGrafico/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminGrafico/VendasMensal.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminGrafico/VendasMensal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvXFZlbmRhc01lbnNhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminGrafico/VendasSemanal.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminGrafico/VendasSemanal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvXFZlbmRhc1NlbWFuYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminImagens/GetImagens.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminImagens/GetImagens.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5JbWFnZW5zXEdldEltYWdlbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminImagens/Index.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminImagens/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5JbWFnZW5zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminImagens/UploadFiles.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminImagens/UploadFiles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5JbWFnZW5zXFVwbG9hZEZpbGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminLanches/Create.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminLanches/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5MYW5jaGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminLanches/Index.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminLanches/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5MYW5jaGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminLanches/_Edit.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminLanches/_Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5MYW5jaGVzXF9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminPedidos/Create.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminPedidos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminPedidos/Delete.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminPedidos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminPedidos/Details.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminPedidos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminPedidos/Edit.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminPedidos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminPedidos/Index.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminPedidos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminPedidos/PedidoLanches.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminPedidos/PedidoLanches.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXFBlZGlkb0xhbmNoZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminPedidos/PedidoNotFound.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminPedidos/PedidoNotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXFBlZGlkb05vdEZvdW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminRelatorioVendas/Index.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminRelatorioVendas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5SZWxhdG9yaW9WZW5kYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminRelatorioVendas/RelatorioVendasSimples.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminRelatorioVendas/RelatorioVendasSimples.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5SZWxhdG9yaW9WZW5kYXNcUmVsYXRvcmlvVmVuZGFzU2ltcGxlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/Admin/Index.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Account/AccessDenied.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Account/Login.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Account/LoginGentella.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Account/LoginGentella.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbkdlbnRlbGxhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Account/LoginSimples.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Account/LoginSimples.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpblNpbXBsZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Account/Register.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/CarrinhoCompra/Index.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/CarrinhoCompra/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9Db21wcmFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Contato/Index.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Contato/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Home/Index.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Home/IndexAlternativa.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Home/IndexAlternativa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleEFsdGVybmF0aXZhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Home/_IndexPartial.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Home/_IndexPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfSW5kZXhQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Lanche/Details.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Lanche/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuY2hlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Lanche/List.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Lanche/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuY2hlXExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Pedido/Checkout.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Pedido/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXENoZWNrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Pedido/CheckoutCompleto.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Pedido/CheckoutCompleto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXENoZWNrb3V0Q29tcGxldG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Shared/Components/CarrinhoCompraResumo/Default.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Shared/Components/CarrinhoCompraResumo/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FycmluaG9Db21wcmFSZXN1bW9cRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Shared/Components/CategoryMenu/Default.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Shared/Components/CategoryMenu/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcnlNZW51XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Shared/Error.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Shared/_Carousel.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Shared/_Carousel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJvdXNlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Shared/_LanchesResumo.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Shared/_LanchesResumo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYW5jaGVzUmVzdW1vLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Shared/_LoginPartialAntiga.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Shared/_LoginPartialAntiga.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWxBbnRpZ2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/_ViewImports.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/_ViewStart.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Views/Shared/_Layout.cshtml]
+[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7evdkz85bn
