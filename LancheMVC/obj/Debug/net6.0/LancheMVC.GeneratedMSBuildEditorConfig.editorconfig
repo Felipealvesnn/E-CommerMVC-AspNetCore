@@ -27,26 +27,7 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXF9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminGrafico/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminGrafico/VendasMensal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvXFZlbmRhc01lbnNhbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminGrafico/VendasSemanal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvXFZlbmRhc1NlbWFuYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
->>>>>>> 4bc83778d8eb88d3db54e57b37c85b228b1fc77f
 [C:/Users/Rudrex/OneDrive/Documentos/GitHub/LancheMVC/LancheMVC/Areas/Admin/Views/AdminImagens/GetImagens.cshtml]
-=======
-[C:/Users/admin/Documents/Felipe/Github/E-CommerMVC-AspNetCore/LancheMVC/Areas/Admin/Views/AdminImagens/GetImagens.cshtml]
->>>>>>> parent of b87e056 (google chart adiconado e terminado)
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5JbWFnZW5zXEdldEltYWdlbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
