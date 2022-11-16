@@ -2,7 +2,21 @@
 
 <!-- Custom Theme Style -->
 <link href="~/build/css/custom.min.css" rel="stylesheet">
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="~/LancheMVC.styles.css" asp-append-version="true" />
+<script src="https://kit.fontawesome.com/ddb983a3c3.js" crossorigin="anonymous"></script>
 
+<!-- Font Awesome -->
+<link href="~/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<!-- NProgress -->
+<link href="~/vendors/nprogress/nprogress.css" rel="stylesheet">
+<!-- Animate.css -->
+<link href="~/vendors/animate.css/animate.min.css" rel="stylesheet">
+@{
+    Layout = null;
+}
 
 <body class="login">
     <div>
@@ -43,8 +57,8 @@
                             <br />
 
                             <div>
-                                <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                                <p>©2022 All Rights Reserved. Gentelella Alela! is a Bootstrap 4 template. Privacy and Terms</p>
+                                <h1><i class="fa fa-paw"></i> Mvc lamnches</h1>
+                                <p>©2022 All Rights Reserved. Felipe Mvc template. Privacy and Terms</p>
                             </div>
                         </div>
                     </form>
@@ -60,12 +74,12 @@
                             <input asp-for="UserName" class="form-control" />
                             <span asp-validation-for="UserName" class="text-danger"></span>
                         </div>
-                        <div>
+                     @*   <div>
                             <input type="email" class="form-control" placeholder="Email" required="" />
                         </div>
                         <div>
                             <input asp-for="Password" type="password" class="form-control" placeholder="Password" required="" />
-                        </div>
+                        </div>*@
                         <div>
                             <a class="btn btn-success submit" href="index.html">Submit</a>
                         </div>
@@ -82,7 +96,7 @@
                             <br />
 
                             <div>
-                                <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                                <h1><i class="fa fa-paw"></i> MVC lanches</h1>
                                 <p>©2026 All Rights Reserved. Gentelella Alela! is a Bootstrap 4 template. Privacy and Terms</p>
                             </div>
                         </div>
