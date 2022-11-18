@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Identity;
 
 namespace LancheMVC;
 
-public class Startup
+public class StartupAntigo
 {
-    public Startup(IConfiguration configuration)
+    public StartupAntigo(IConfiguration configuration)
     {
         Configuration = configuration;
     }
@@ -20,7 +20,7 @@ public class Startup
         //services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("coneccaoDB"),
         //    b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName))
 
-        //);
+        //);  
 
         services.ConfiguraçãoServices(Configuration);
 

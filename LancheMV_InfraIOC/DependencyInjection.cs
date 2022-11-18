@@ -62,7 +62,7 @@ namespace LancheMV_InfraIOC
 
             services.Configure<ConfigurationImagens>(configuration.GetSection("ConfigurationsPastaImagens"));
 
-            services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));// carrinho instaciado e iniciado na sessao
+            services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp)); // carrinho instaciado e iniciado na sessao
 
             services.AddPaging(options => {
                 options.ViewName = "Bootstrap4";

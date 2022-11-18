@@ -1,18 +1,120 @@
-namespace LancheMVC;
+﻿using LancheMVC;
+using LancheMVC_Aplication.Serviços;
+using LancheMVC_Data.Contexto;
+using LancheMVC_Data.Identity;
+using LancheMVC_Data.Repository;
+using LancheMVC_Data;
+using LancheMVC_Domain.ContasInterfaces;
+using LancheMVC_Domain.Interfaces;
+using LancheMVC_Domain;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using ReflectionIT.Mvc.Paging;
+using System.Configuration;
+using LancheMV_InfraIOC;
 
-public class Program
+var builder = WebApplication.CreateBuilder(args);
+
+
+
+//var connection = builder.Configuration.GetConnectionString("DefaultConnection");
+//builder.Services.AddDbContext<AppDbContext>(options =>
+//           options.UseSqlServer(connection));
+
+
+//builder.Services.Configure<ConfigurationImagens>(builder.Configuration
+//    .GetSection("ConfigurationPastaImagens"));
+
+//builder.Services.AddTransient<ILancheRepository, LancheRepository>();
+//builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+//builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
+//builder.Services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
+//builder.Services.AddScoped<RelatorioVendasService>();
+//builder.Services.AddScoped<GraficoVendasService>();
+
+//builder.Services.AddAuthorization(options =>
+//{
+//    options.AddPolicy("Admin",
+//        politica =>
+//        {
+//            politica.RequireRole("Admin");
+//        });
+//});
+
+//builder.Services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
+
+//builder.Services.AddControllersWithViews();
+
+//builder.Services.AddPaging(options =>
+//{
+//    options.ViewName = "Bootstrap4";
+//    options.PageParameterName = "pageindex";
+//});
+
+//builder.Services.AddMemoryCache();
+//builder.Services.AddSession();
+
+
+builder.Services.ConfiguraçãoServices(builder.Configuration);
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+            .AddEntityFrameworkStores<AppDbContext>()
+            .AddDefaultTokenProviders();
+
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
 {
-    public static void Main(string[] args)
-    {
-        CreateHostBuilder(args)
-           .Build()
-           .Run();
-    }
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
+app.UseHttpsRedirection();
 
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-                webBuilder.UseStartup<Startup>();
-            });
+app.UseStaticFiles();
+app.UseRouting();
+
+CriarPerfisUsuarios(app);
+
+////cria os perfis
+//seedUserRoleInitial.SeedRoles();
+////cria os usuários e atribui ao perfil
+//seedUserRoleInitial.SeedUsers();
+
+app.UseSession();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+     name: "areas",
+     pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
+
+    endpoints.MapControllerRoute(
+       name: "categoriaFiltro",
+       pattern: "Lanche/{action}/{categoria?}",
+       defaults: new { Controller = "Lanche", action = "List" });
+
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+});
+
+app.Run();
+
+void CriarPerfisUsuarios(WebApplication app)
+{
+    var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
+    using (var scope = scopedFactory.CreateScope())
+    {
+        var service = scope.ServiceProvider.GetService<ISeedUserRoleInitial>();
+        service.SeedUser();
+        service.SeedRole();
+    }
 }
