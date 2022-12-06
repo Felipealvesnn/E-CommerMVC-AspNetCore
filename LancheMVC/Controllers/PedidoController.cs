@@ -60,7 +60,7 @@ namespace LancheMVC.Controllers
                 //cria o pedido e os detalhes
                 _pedidoRepository.CriarPedido(pedido);
 
-                    
+
 
 
                 //define mensagens ao cliente

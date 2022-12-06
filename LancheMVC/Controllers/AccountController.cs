@@ -29,11 +29,11 @@ namespace LancheMVC.Controllers
             if (!ModelState.IsValid)
                 return View(loginVM);
             var user = await _userManager.FindByNameAsync(loginVM.UserName);
-            
+
             if (user != null)
             {
                 var result = await _signInManager.PasswordSignInAsync(user, loginVM.Password, false, false);
-                
+
                 if (result.Succeeded)
                 {
                     if (string.IsNullOrEmpty(loginVM.ReturnURL))
@@ -45,7 +45,7 @@ namespace LancheMVC.Controllers
             }
 
             ModelState.AddModelError("", "Falha ao realizar o login!!");
-            return View( loginVM);
+            return View(loginVM);
         }
 
         public IActionResult Register()

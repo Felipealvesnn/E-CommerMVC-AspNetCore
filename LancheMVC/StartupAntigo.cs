@@ -24,21 +24,21 @@ public class StartupAntigo
 
         services.ConfiguraçãoServices(Configuration);
 
-       
+
 
         services.AddIdentity<IdentityUser, IdentityRole>()
 
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();
 
-     
-   
+
+
 
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-     
-      
 
-   
+
+
+
 
     }
 

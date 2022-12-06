@@ -1,6 +1,5 @@
 ﻿using LancheMVC_Aplication.DTOs;
 using LancheMVC_Aplication.Interfaces;
-using LancheMVC_Data.Repository;
 using LancheMVC_Domain.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -101,7 +100,7 @@ namespace LancheMVC.Areas.Admin.Controllers
         [HttpPost(), ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
-             _lanches.Delete(id);
+            _lanches.Delete(id);
             return RedirectToAction(nameof(Index));
         }
 

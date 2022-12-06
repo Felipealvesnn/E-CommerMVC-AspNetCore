@@ -41,7 +41,7 @@ namespace LancheMVC.Areas.Admin.Controllers
                 _Categorias.Add(categoria);
                 return RedirectToAction(nameof(Index));
             }
-          //  ~/ Areas / Views / AdminCategorias / _Create.cshtml
+            //  ~/ Areas / Views / AdminCategorias / _Create.cshtml
             return View("_Create", categoria);
         }
 
@@ -74,7 +74,7 @@ namespace LancheMVC.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-       
+
             return View(categoria);
         }
     }

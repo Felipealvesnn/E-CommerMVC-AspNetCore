@@ -65,7 +65,7 @@ namespace LancheMVC.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 _pedidoRepository.Adicionar(pedido);
-                
+
                 return RedirectToAction(nameof(Index));
             }
             return View(pedido);
@@ -79,7 +79,7 @@ namespace LancheMVC.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var pedido =  _pedidoRepository.PegaPorId(id);
+            var pedido = _pedidoRepository.PegaPorId(id);
             if (pedido == null)
             {
                 return NotFound();
@@ -134,7 +134,7 @@ namespace LancheMVC.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-           
+
 
             return View(pedido);
         }

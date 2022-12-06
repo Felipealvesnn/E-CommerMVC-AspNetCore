@@ -1,17 +1,7 @@
-﻿using LancheMVC;
-using LancheMVC_Aplication.Serviços;
+﻿using LancheMV_InfraIOC;
 using LancheMVC_Data.Contexto;
-using LancheMVC_Data.Identity;
-using LancheMVC_Data.Repository;
-using LancheMVC_Data;
 using LancheMVC_Domain.ContasInterfaces;
-using LancheMVC_Domain.Interfaces;
-using LancheMVC_Domain;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using ReflectionIT.Mvc.Paging;
-using System.Configuration;
-using LancheMV_InfraIOC;
 
 var builder = WebApplication.CreateBuilder(args);
 
