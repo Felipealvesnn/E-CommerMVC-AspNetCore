@@ -62,6 +62,7 @@ else
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
+app.UseFastReport(); //midle do fast report
 app.UseRouting();
 
 CriarPerfisUsuarios(app);

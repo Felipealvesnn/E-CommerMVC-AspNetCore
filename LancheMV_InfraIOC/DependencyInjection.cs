@@ -1,4 +1,5 @@
-﻿using LancheMVC;
+﻿using FastReport.Data;
+using LancheMVC;
 using LancheMVC_Aplication.Interfaces;
 using LancheMVC_Aplication.Maps;
 using LancheMVC_Aplication.Serviços;
@@ -55,6 +56,9 @@ namespace LancheMV_InfraIOC
             services.AddScoped<ICategoryServices, CategoryService>();
             services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
             services.AddScoped<IPedidoRepository, PedidoRepository>();
+             
+            //fastreport
+            FastReport.Utils.RegisteredObjects.AddConnection(typeof(MsSqlDataConnection));
 
 
             // iniciano identity no banco
