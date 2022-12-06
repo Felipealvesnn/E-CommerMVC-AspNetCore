@@ -1,6 +1,5 @@
 ﻿using LancheMVC_Domain;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LancheMVC_Aplication.DTOs
 {
@@ -21,6 +20,6 @@ namespace LancheMVC_Aplication.DTOs
 
         public List<Lanche> Lanches { get; set; }
 
-     
+
     }
 }

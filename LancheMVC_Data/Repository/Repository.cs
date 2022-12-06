@@ -1,7 +1,6 @@
 ﻿using LancheMVC_Data.Contexto;
 using LancheMVC_Domain;
 using LancheMVC_Domain.Interfaces;
-using Microsoft.EntityFrameworkCore;
 
 namespace LancheMVC_Data.Repository
 {
@@ -13,17 +12,17 @@ namespace LancheMVC_Data.Repository
         {
             _Ctx = ctx;
         }
-        public  IEnumerable<t> ReTornaTodos()
+        public IEnumerable<t> ReTornaTodos()
         {
-            return   _Ctx.Set<t>().ToList();
+            return _Ctx.Set<t>().ToList();
         }
         public t PegaPorId(int? id)
         {
-            return  _Ctx.Set<t>().Find(id);
+            return _Ctx.Set<t>().Find(id);
 
 
         }
 
-       
+
     }
 }

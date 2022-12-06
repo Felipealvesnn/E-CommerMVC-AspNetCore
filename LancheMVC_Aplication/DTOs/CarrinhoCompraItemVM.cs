@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using LancheMVC_Aplication.DTOs;
 
 namespace LancheMVC_Aplication.DTOs
 {

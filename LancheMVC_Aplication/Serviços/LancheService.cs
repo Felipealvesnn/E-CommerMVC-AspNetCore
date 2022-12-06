@@ -20,7 +20,7 @@ namespace LancheMVC_Aplication.Serviços
 
         public LancheDTO PegarPorId(int? id)
         {
-            var LancheID =  _lanche.PegaLanchePorId(id);
+            var LancheID = _lanche.PegaLanchePorId(id);
             return LancheID.TOLancheDTO();
 
 
@@ -41,13 +41,13 @@ namespace LancheMVC_Aplication.Serviços
 
         public IQueryable<LancheDTO> RetornaTodos()
         {
-            var categoriesEntity =  _lanche.RetornaLancheComCategoria();
+            var categoriesEntity = _lanche.RetornaLancheComCategoria();
             return categoriesEntity.TOLancheDTOEnumerable();
         }
 
         public void Add(LancheDTO productDTO)
         {
-            
+
             _lanche.Adicionar(productDTO.TOLanche());
         }
 
@@ -59,7 +59,7 @@ namespace LancheMVC_Aplication.Serviços
         public void Delete(int? id)
         {
             var categoryEntity = _lanche.PegaLanchePorId(id);
-            
+
             _lanche.Remover(categoryEntity);
         }
     }

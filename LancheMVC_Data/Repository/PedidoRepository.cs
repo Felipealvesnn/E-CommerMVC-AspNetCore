@@ -21,7 +21,7 @@ namespace LancheMVC_Data.Repository
         public void Adicionar(Pedido pedido)
         {
             _appDbContext.Pedidos.Add(pedido);
-             _appDbContext.SaveChanges();
+            _appDbContext.SaveChanges();
         }
 
         public void Atualizar(Pedido pedido)
@@ -47,7 +47,7 @@ namespace LancheMVC_Data.Repository
                     PedidoId = pedido.PedidoId,
                     Preco = item.Lanche.Preco,
                     Nome = item.Lanche.Nome,
-                    ImagemUrl= item.Lanche.ImagemUrl,
+                    ImagemUrl = item.Lanche.ImagemUrl,
 
                 };
                 _appDbContext.PedidoDetalhes.Add(pedidoDetail);
@@ -66,13 +66,13 @@ namespace LancheMVC_Data.Repository
 
         public Pedido PegaPorId(int? id)
         {
-            var pedido = _appDbContext.Pedidos.Include(d=>d.PedidoItens).ThenInclude(d=>d.Lanche).FirstOrDefault(d=>d.PedidoId==id);
+            var pedido = _appDbContext.Pedidos.Include(d => d.PedidoItens).ThenInclude(d => d.Lanche).FirstOrDefault(d => d.PedidoId == id);
             return pedido;
         }
 
         public void Remover(Pedido pedido)
         {
-          
+
             _appDbContext.Pedidos.Remove(pedido);
             _appDbContext.SaveChanges();
         }
@@ -87,6 +87,6 @@ namespace LancheMVC_Data.Repository
             return _appDbContext.Pedidos.Any(e => e.PedidoId == id);
         }
 
-        
+
     }
 }

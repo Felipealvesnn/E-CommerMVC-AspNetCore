@@ -1,7 +1,5 @@
 ﻿using LancheMV_InfraIOC;
-using LancheMVC_Data.Contexto;
 using LancheMVC_Domain.ContasInterfaces;
-using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,9 +46,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.ConfiguraçãoServices(builder.Configuration);
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-            .AddEntityFrameworkStores<AppDbContext>()
-            .AddDefaultTokenProviders();
+
 
 var app = builder.Build();
 

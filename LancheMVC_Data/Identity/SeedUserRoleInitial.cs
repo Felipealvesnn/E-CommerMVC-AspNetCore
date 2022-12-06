@@ -1,10 +1,5 @@
 ﻿using LancheMVC_Domain.ContasInterfaces;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LancheMVC_Data.Identity
 {
@@ -21,7 +16,7 @@ namespace LancheMVC_Data.Identity
 
         public void SeedRole()
         {
-            if(!_roleManager.RoleExistsAsync("Member").Result)
+            if (!_roleManager.RoleExistsAsync("Member").Result)
             {
                 IdentityRole role = new IdentityRole();
                 role.Name = "Member";
@@ -76,6 +71,6 @@ namespace LancheMVC_Data.Identity
             }
 
 
-        }   
+        }
     }
 }

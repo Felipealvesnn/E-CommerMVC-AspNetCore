@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LancheMVC_Domain
+﻿namespace LancheMVC_Domain
 {
-    public class Lanche 
+    public class Lanche
     {
         public int LancheId { get; set; }
         public string Nome { get; set; }
@@ -19,7 +13,7 @@ namespace LancheMVC_Domain
         public bool EmEstoque { get; set; }
 
         public int CategoriaId { get; set; }
-        public  Categoria Categoria { get; set; }
+        public Categoria Categoria { get; set; }
 
         //public Lanche(string nome, string descricaoCurta, string descricaoDetalhada, decimal preco, string imagemUrl, string imagemThumbnailUrl, bool isLanchePreferido, bool emEstoque, int categoriaId, Categoria categoria)
         //{

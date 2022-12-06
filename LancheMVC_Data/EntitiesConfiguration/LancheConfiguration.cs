@@ -1,11 +1,6 @@
 ﻿using LancheMVC_Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LancheMVC_Data.EntitiesConfiguration
 {
@@ -18,7 +13,7 @@ namespace LancheMVC_Data.EntitiesConfiguration
             builder.Property(c => c.DescricaoDetalhada).HasMaxLength(200).IsRequired();
             builder.Property(c => c.DescricaoCurta).HasMaxLength(100).IsRequired();
             builder.Property(p => p.Preco).HasPrecision(10, 2);
-          //  builder.HasOne(e => e.Categoria).WithMany(e => e.Lanches).HasForeignKey(e => e.CategoriaId);
+            //  builder.HasOne(e => e.Categoria).WithMany(e => e.Lanches).HasForeignKey(e => e.CategoriaId);
         }
     }
 }

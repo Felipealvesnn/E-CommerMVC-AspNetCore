@@ -3,11 +3,6 @@ using LancheMVC_Aplication.DTOs;
 using LancheMVC_Aplication.Interfaces;
 using LancheMVC_Domain;
 using LancheMVC_Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LancheMVC_Aplication.Serviços
 {
@@ -27,9 +22,9 @@ namespace LancheMVC_Aplication.Serviços
             _Category.Adicionar(_mapper.Map<Categoria>(categoryDTO));
         }
 
-        public  CategoriaDTO PegarPorId(int? id)
+        public CategoriaDTO PegarPorId(int? id)
         {
-            var categories =  _Category.PegaPorId(id);
+            var categories = _Category.PegaPorId(id);
             return _mapper.Map<CategoriaDTO>(categories);
         }
 
@@ -40,10 +35,10 @@ namespace LancheMVC_Aplication.Serviços
             _Category.Remover(categoryEntity);
         }
 
-        public  IEnumerable<CategoriaDTO> RetornaTodos()
+        public IEnumerable<CategoriaDTO> RetornaTodos()
         {
-            var categories =  _Category.ReTornaTodos();
-            return  _mapper.Map<IEnumerable<CategoriaDTO>>(categories);
+            var categories = _Category.ReTornaTodos();
+            return _mapper.Map<IEnumerable<CategoriaDTO>>(categories);
         }
 
         public void Update(CategoriaDTO categoryDTO)

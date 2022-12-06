@@ -9,7 +9,7 @@ using LancheMVC_Data.Repository;
 using LancheMVC_Domain;
 using LancheMVC_Domain.ContasInterfaces;
 using LancheMVC_Domain.Interfaces;
-
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -42,9 +42,8 @@ namespace LancheMV_InfraIOC
             //    options.Password.RequiredUniqueChars = 1;
             //});
 
-           
-            services.AddMemoryCache();
 
+            services.AddMemoryCache();
 
             services.AddControllersWithViews();
             services.AddMemoryCache();
@@ -57,6 +56,12 @@ namespace LancheMV_InfraIOC
             services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
             services.AddScoped<IPedidoRepository, PedidoRepository>();
 
+
+            // iniciano identity no banco
+            services.AddIdentity<IdentityUser, IdentityRole>()
+            .AddEntityFrameworkStores<AppDbContext>()
+            .AddDefaultTokenProviders();
+
             services.AddScoped<RelatorioVendaService>();
             services.AddScoped<GraficoVendasServices>();
 
@@ -64,7 +69,8 @@ namespace LancheMV_InfraIOC
 
             services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp)); // carrinho instaciado e iniciado na sessao
 
-            services.AddPaging(options => {
+            services.AddPaging(options =>
+            {
                 options.ViewName = "Bootstrap4";
                 options.PageParameterName = "pageindex";
             });

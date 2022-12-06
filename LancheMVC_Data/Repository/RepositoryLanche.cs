@@ -7,7 +7,7 @@ namespace LancheMVC_Data.Repository
 {
     public class RepositoryLanche : ILanches
     {
-        public readonly  AppDbContext _Ctx;
+        public readonly AppDbContext _Ctx;
 
         public RepositoryLanche(AppDbContext ctx)
         {
@@ -16,7 +16,7 @@ namespace LancheMVC_Data.Repository
 
         public Lanche PegaLanchePorId(int? testes)
         {
-          var testesss =  _Ctx.Lanches.AsNoTracking().Include(c => c.Categoria).SingleOrDefault(p => p.LancheId == testes);
+            var testesss = _Ctx.Lanches.AsNoTracking().Include(c => c.Categoria).SingleOrDefault(p => p.LancheId == testes);
             _Ctx.Entry(testesss).State = EntityState.Detached;
             return testesss;
 

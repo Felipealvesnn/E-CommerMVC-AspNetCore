@@ -5,7 +5,7 @@ namespace LancheMVC
 {
     public static class MapNaMao
     {
-        public static LancheDTO TOLancheDTO (this Lanche model)
+        public static LancheDTO TOLancheDTO(this Lanche model)
         {
 
             return new LancheDTO()
@@ -47,25 +47,25 @@ namespace LancheMVC
 
         }
 
-        
-            public static IQueryable<LancheDTO> TOLancheDTOEnumerable(this IQueryable<Lanche> model)
+
+        public static IQueryable<LancheDTO> TOLancheDTOEnumerable(this IQueryable<Lanche> model)
+        {
+
+            return model.Select(p => new LancheDTO()
             {
-
-                return model.Select(p => new LancheDTO()
-                {
-                    Id = p.LancheId,
-                    Nome = p.Nome,
-                    DescricaoCurta = p.DescricaoCurta,
-                    DescricaoDetalhada = p.DescricaoDetalhada,
-                    Preco = p.Preco,
-                    ImagemUrl = p.ImagemUrl,
-                    ImagemThumbnailUrl = p.ImagemUrl,
-                    IsLanchePreferido = p.IsLanchePreferido,
-                    EmEstoque = p.EmEstoque,
-                    CategoriaId = p.CategoriaId,
-                    Categoria = p.Categoria,
-                });
-            }
-
+                Id = p.LancheId,
+                Nome = p.Nome,
+                DescricaoCurta = p.DescricaoCurta,
+                DescricaoDetalhada = p.DescricaoDetalhada,
+                Preco = p.Preco,
+                ImagemUrl = p.ImagemUrl,
+                ImagemThumbnailUrl = p.ImagemUrl,
+                IsLanchePreferido = p.IsLanchePreferido,
+                EmEstoque = p.EmEstoque,
+                CategoriaId = p.CategoriaId,
+                Categoria = p.Categoria,
+            });
         }
+
+    }
 }

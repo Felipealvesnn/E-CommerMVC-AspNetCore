@@ -1,6 +1,5 @@
 ﻿using LancheMVC_Data.Contexto;
 using LancheMVC_Domain;
-using LancheMVC_Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -55,7 +54,7 @@ namespace LancheMVC
                 {
                     CarrinhoCompraId = CarrinhoCompraId,
                     LancheId = lanche.LancheId,
-                   
+
                     Quantidade = 1
                 };
 
@@ -125,7 +124,7 @@ namespace LancheMVC
         {
             var carrinhoItens = _context.CarrinhoCompraItem
                                  .Where(carrinho => carrinho.CarrinhoCompraId == CarrinhoCompraId);
-           
+
             _context.CarrinhoCompraItem.RemoveRange(carrinhoItens);
             _context.SaveChanges();
         }
