@@ -52,7 +52,7 @@ namespace LancheMVC.Areas.Admin.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost, ValidateAntiForgeryToken]
         public IActionResult Create(LancheDTO lanche)
         {
             if (ModelState.IsValid)

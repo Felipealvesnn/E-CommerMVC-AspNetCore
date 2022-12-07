@@ -38,6 +38,7 @@ namespace LancheMVC.Areas.Admin.Controllers
             var result = await relatorioVendasService.ProcuraDAtaASYNC(minDate, maxDate);
             return View(result);
         }
+
         //public ActionResult report(string tipo)
         //{
         //    string[] streams = null;
