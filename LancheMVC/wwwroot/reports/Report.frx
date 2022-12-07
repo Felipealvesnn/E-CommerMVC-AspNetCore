@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="CSharp" ReportInfo.Created="12/07/2022 09:43:16" ReportInfo.Modified="12/07/2022 10:08:11" ReportInfo.CreatorVersion="2023.1.0.0">
+<Report ScriptLanguage="CSharp" ReportInfo.Created="12/07/2022 09:43:16" ReportInfo.Modified="12/07/2022 13:59:45" ReportInfo.CreatorVersion="2023.1.0.0">
   <Dictionary>
-    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlqJUrEa/KIcQqhhcfnlqC6PKK8MheP9IEu4gFWCPXnWzFgLjPP39mqhm6WKckRi90qfWFHDc7eZn2VVrd1T5h+hXgNvNOybwsReFZkMQlVOH4kmVKI20Mcga+GysSaz+zZcCY0LPZpAHUOkpjgsO5wtg3yjizhoHfAMn83vmjQvQXGhktao3wUv+i+WZvkcjNCq5GFx+H44RuYwvb218+yzw==">
+    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlqJUrEa/KIcQqhhcfnlqC6PKK8MheP9IEu4gFWCPXnWzFgLjPP39mqhm6WKckRi90qfWFHDc7eZn2VVrd1T5h+hXgNvNOybwsReFZkMQlVOH4kmVKI20Mcga+GysSaz+zZcCY0LPZpAHUOkpjgsO5wtg3yjizhoHfAMn83vmjQvQXGhktao3wUv+i+WZvkcjNCDCYHhtKazZOvCc0jeEP2LQ==">
       <TableDataSource Name="Categorias" DataType="System.Int32" Enabled="true" TableName="Categorias">
         <Column Name="CategoriaId" DataType="System.Int32"/>
         <Column Name="CategoryName" DataType="System.String"/>
@@ -33,7 +33,7 @@
     <DataBand Name="Data1" Top="93.05" Width="718.2" Height="75.6" Fill.Color="128, 255, 255" StartNewPage="true" DataSource="Categorias">
       <TextObject Name="Text1" Top="18.9" Width="236.25" Height="18.9" Text="[Categorias.CategoryName]" Font="Arial, 12pt, style=Bold"/>
       <TextObject Name="Text3" Left="236.25" Top="18.9" Width="396.9" Height="18.9" Text="[Categorias.Descricao]" Font="Arial, 10pt"/>
-      <DataBand Name="Data2" Top="214.45" Width="718.2" Height="207.9" Fill.Color="192, 255, 255" DataSource="Lanches">
+      <DataBand Name="Data2" Top="214.45" Width="718.2" Height="75.6" Border.Lines="Top, Bottom" Fill.Color="192, 255, 255" DataSource="Lanches">
         <TextObject Name="Text5" Width="151.2" Height="18.9" Text="[Lanches.Nome]" Font="Arial, 10pt, style=Bold"/>
         <TextObject Name="Text7" Left="160.65" Width="217.35" Height="18.9" Text="[Lanches.DescricaoCurta]" Font="Arial, 10pt, style=Bold"/>
         <TextObject Name="Text9" Left="387.45" Width="141.75" Height="18.9" Text="[Lanches.Preco]" Format="Currency" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" WordWrap="false" Font="Arial, 12pt, style=Bold" Trimming="EllipsisCharacter"/>
@@ -45,6 +45,6 @@
         </DataHeaderBand>
       </DataBand>
     </DataBand>
-    <PageFooterBand Name="PageFooter1" Top="426.35" Width="718.2" Height="18.9"/>
+    <PageFooterBand Name="PageFooter1" Top="294.05" Width="718.2" Height="444.15"/>
   </ReportPage>
 </Report>

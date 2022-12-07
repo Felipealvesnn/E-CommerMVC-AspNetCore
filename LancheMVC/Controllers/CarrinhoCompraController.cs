@@ -15,9 +15,10 @@ namespace LancheMVC.Controllers
             _lanches = lanches;
             _carrrinhoCompra = carrrinhoCompra;
         }
-
+      
         public IActionResult Index()
         {
+       
             var itens = _carrrinhoCompra.GetCarrinhoCompraItens();
             _carrrinhoCompra.CarrinhoCompraItems = itens;
 

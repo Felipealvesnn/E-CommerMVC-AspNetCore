@@ -7,6 +7,7 @@ using LancheMVC_Data;
 using LancheMVC_Data.Contexto;
 using LancheMVC_Data.Identity;
 using LancheMVC_Data.Repository;
+using LancheMVC_Data.Services;
 using LancheMVC_Domain;
 using LancheMVC_Domain.ContasInterfaces;
 using LancheMVC_Domain.Interfaces;
@@ -59,7 +60,8 @@ namespace LancheMV_InfraIOC
              
             //fastreport
             FastReport.Utils.RegisteredObjects.AddConnection(typeof(MsSqlDataConnection));
-
+            services.AddScoped<RelatorioLanchesService>();
+            
 
             // iniciano identity no banco
             services.AddIdentity<IdentityUser, IdentityRole>()
