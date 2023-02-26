@@ -47,6 +47,13 @@ builder.Services.ConfiguraçãoServices(builder.Configuration);
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(5);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 
 var app = builder.Build();
 
@@ -73,6 +80,7 @@ CriarPerfisUsuarios(app);
 //seedUserRoleInitial.SeedUsers();
 
 app.UseSession();
+
 
 app.UseAuthentication();
 app.UseAuthorization();
