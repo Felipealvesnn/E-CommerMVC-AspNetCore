@@ -42,6 +42,8 @@ namespace LancheMVC.Controllers
                     }
                     return Redirect(loginVM.ReturnURL);
                 }
+                
+              
             }
 
             ModelState.AddModelError("", "Falha ao realizar o login!!");
@@ -72,8 +74,10 @@ namespace LancheMVC.Controllers
                 }
                 else
                 {
+                    TempData["error"] = "Error ao criar a conta";
                     this.ModelState.AddModelError("Registro", "Falha ao registrar o usuário");
                 }
+
             }
             return View(loginVM);
         }

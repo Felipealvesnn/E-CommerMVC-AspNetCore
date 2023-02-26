@@ -9,7 +9,8 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="~/LancheMVC.styles.css" asp-append-version="true" />
     <script src="https://kit.fontawesome.com/ddb983a3c3.js" crossorigin="anonymous"></script>
-
+    <link href="~/css/jquery.toast.css" rel="stylesheet" />
+    
     <!-- Font Awesome -->
     <link href="~/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
@@ -90,6 +91,14 @@
             &copy; 2022 - Felipe projeto - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+    <input type="hidden" id="success"
+           value="@TempData["success"]" />
+    <input type="hidden" id="info"
+           value="@TempData["info"]" />
+    <input type="hidden" id="warning"
+           value="@TempData["warning"]" />
+    <input type="hidden" id="error"
+           value="@TempData["error"]" />
 
 
 @*    <footer class="border-top footer text-muted">
@@ -119,7 +128,39 @@
     </footer>*@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/jquery.toast.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <script>
+
+        var displayMessage = function (message, msgType) {
+            $.toast({
+                heading: msgType,
+                text: message,
+                position: 'top-center',
+                icon: msgType,
+                stack: false
+            })
+        };
+
+        $(document).ready(function () {
+
+            if ($('#success').val()) {
+                displayMessage($('#success').val(), 'success');
+            }
+            if ($('#info').val()) {
+                displayMessage($('#info').val(), 'info');
+            }
+            if ($('#warning').val()) {
+                displayMessage($('#warning').val(), 'warning');
+            }
+            if ($('#error').val()) {
+                displayMessage($('#error').val(), 'error');
+            }
+
+
+        })
+
+    </script>
 </body>
 </html>
