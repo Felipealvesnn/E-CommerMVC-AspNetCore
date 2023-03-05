@@ -38,6 +38,7 @@ namespace LancheMVC.Controllers
                 {
                     if (string.IsNullOrEmpty(loginVM.ReturnURL))
                     {
+                        await _signInManager.RefreshSignInAsync(user); // definir o tempo limite de inatividade, 10 minutos sem interação com o site
                         return RedirectToAction("Index", "Home");
                     }
                     return Redirect(loginVM.ReturnURL);
