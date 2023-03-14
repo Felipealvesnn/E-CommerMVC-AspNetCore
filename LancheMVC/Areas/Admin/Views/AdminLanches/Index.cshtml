@@ -7,11 +7,12 @@
 
 
 <form method="get" class=" row">
-
-    <input name="filter" class="form-control col-2" placeholder="filtro"
+    <div class="col-2">
+    <input name="filter" class="form-control " placeholder="filtro"
            value="@Model.RouteValue["Filter"]" />
 
     <button type="submit" class="btn btn-info mt-1">Procurar</button>
+    </div>
 </form>
 
 Total de Pedidos : @Model.TotalRecordCount
@@ -91,6 +92,7 @@ Total de Pedidos : @Model.TotalRecordCount
                     @Html.DisplayFor(modelItem => item.Categoria.CategoryName)
                 </td>
                 <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
                     <a  id="ideditre" class="btn btn-dark EditBottao" data-nome="@item" href="#" >
                         <input name="MODALEWPOET" data-nome="@item.Id" type="hidden" value="@item" /> Edit
                     </a>
@@ -100,6 +102,7 @@ Total de Pedidos : @Model.TotalRecordCount
                     <a asp-action="Details" class="btn btn-info"  asp-route-id="@item.Id">Details</a> 
                  @*   <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
                     <a id="danger-alert" class="btn btn-danger deletar" data-link=" @Url.Action("Delete", "AdminLanches", new {id = @item.Id}) "><i class="zmdi zmdi-delete zmdi-hc-lg"></i> deletar</a>
+                    </div>
                 </td>
             </tr>
         }
