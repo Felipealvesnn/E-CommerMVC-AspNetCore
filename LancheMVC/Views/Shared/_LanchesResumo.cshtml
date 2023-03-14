@@ -1,6 +1,6 @@
 ﻿@model LancheDTO
 
-<div class="col-sm-4 col-md-4 col-lg-4">
+@*<div class="col-sm-4 col-md-4 col-lg-4">
     <p><img src="@Model.ImagemUrl" class="img-fluid"></p>
     <h3>Preço : @Model.Preco.ToString("c")</h3>
 
@@ -19,4 +19,32 @@
         </p>
     </div>
 
+</div>*@
+
+<div class="col mb-5">
+    <div class="card h-100">
+        <!-- Product image-->
+        <img class="card-img-top" src="@Model.ImagemUrl" alt="..." />
+        <!-- Product details-->
+        <div class="card-body p-4">
+            <div class="text-center">
+                <!-- Product name-->
+                <h5 class="fw-bolder">@Model.DescricaoCurta</h5>
+                <!-- Product price-->
+                @Model.Preco.ToString("c")
+            </div>
+        </div>
+        <!-- Product actions-->
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+                @*<a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>*@
+
+
+                <a class="btn btn-outline-dark mt-auto" id="cartButton" asp-controller="CarrinhoCompra"
+               asp-action="AdicionarItemNoCarrinho" asp-route-lancheId="@Model.Id">
+                    Add to cart
+            </a>
+            </div>
+        </div>
+    </div>
 </div>

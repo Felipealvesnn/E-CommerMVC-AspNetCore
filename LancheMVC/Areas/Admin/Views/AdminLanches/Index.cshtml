@@ -6,9 +6,9 @@
 <h1>Index</h1>
 
 
-<form method="get" class="form-inline">
+<form method="get" class=" row">
 
-    <input name="filter" class="form-control" placeholder="filtro"
+    <input name="filter" class="form-control col-2" placeholder="filtro"
            value="@Model.RouteValue["Filter"]" />
 
     <button type="submit" class="btn btn-info mt-1">Procurar</button>
@@ -92,11 +92,12 @@ Total de Pedidos : @Model.TotalRecordCount
                 </td>
                 <td>
                     <a  id="ideditre" class="btn btn-dark EditBottao" data-nome="@item" href="#" >
-                        <input name="MODALEWPOET" data-nome="@item.Id" type="hidden" value="@item" />
-                        
-                        Edit </a> 
-                  @*  <a asp-action="Edit" id="ideditre" asp-route-id="@item">Edit</a> |*@
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <input name="MODALEWPOET" data-nome="@item.Id" type="hidden" value="@item" /> Edit
+                    </a>
+
+
+                    @*  <a asp-action="Edit" id="ideditre" asp-route-id="@item">Edit</a> |*@
+                    <a asp-action="Details" class="btn btn-info"  asp-route-id="@item.Id">Details</a> 
                  @*   <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
                     <a id="danger-alert" class="btn btn-danger deletar" data-link=" @Url.Action("Delete", "AdminLanches", new {id = @item.Id}) "><i class="zmdi zmdi-delete zmdi-hc-lg"></i> deletar</a>
                 </td>
