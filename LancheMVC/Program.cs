@@ -99,7 +99,7 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
-});
+}); 
 
 app.Run();
 
@@ -109,7 +109,8 @@ void CriarPerfisUsuarios(WebApplication app)
     using (var scope = scopedFactory.CreateScope())
     {
         var service = scope.ServiceProvider.GetService<ISeedUserRoleInitial>();
-        service.SeedUser();
         service.SeedRole();
+        service.SeedUser();
+     
     }
 }
