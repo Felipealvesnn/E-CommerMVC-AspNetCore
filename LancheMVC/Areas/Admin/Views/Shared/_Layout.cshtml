@@ -37,6 +37,7 @@
                                 <li> <a class="nav-link text-light" asp-area="Admin" asp-controller="AdminPedidos" asp-action="Index">Pedidos</a></li>
                                 <li> <a class="nav-link text-light" asp-area="Admin" asp-controller="AdminLanches" asp-action="Index">Lanches Crud</a></li>
                                 <li><a class="nav-link text-light" asp-area="Admin" asp-controller="AdminRelatorioVendas" asp-action="Index">Relatório Vendas</a></li>
+                                <li><a class="nav-link text-light" asp-area="Admin" asp-controller="AdminLanchesReport" asp-action="LanchesCategoriaReport">report Vendas</a></li>
                             </ul>
                         </li>
 
@@ -49,6 +50,9 @@
                                 <li><a class="dropdown-item" asp-area="Admin" asp-controller="AdminGrafico" asp-action="VendasMensal" asp-route-dias="30">Vendas Mensais</a></li>
                                 <li><a class="dropdown-item" asp-area="Admin" asp-controller="AdminGrafico" asp-action="VendasSemanal" asp-route-dias="7">Vendas Semanais</a></li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="Admin" asp-controller="AdminImagens" asp-action="Index" asp-route-dias="7">Imagens vendas</a></
                         </li>
                     </ul>
 
